@@ -12,4 +12,4 @@ int uars (int ra, uint32_t rb)
 {
   return __rv__sra_u (ra, rb);
 }
-/* { dg-final { scan-assembler-times "sra_u" 1 } } */
+/* { dg-final { scan-assembler-times "sra.u" 1 } } */

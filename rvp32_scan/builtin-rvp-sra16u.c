@@ -17,4 +17,4 @@ int16x2_t u61ars_v (int16x2_t ra, uint32_t rb)
 {
   return __rv__v_sra16_u (ra, rb);
 }
-/* { dg-final { scan-assembler-times "sra16_u" 2 } } */
+/* { dg-final { scan-assembler-times "sra16.u" 2 } } */

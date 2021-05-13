@@ -24,6 +24,4 @@ int16x2_t asrcs_v (int16x2_t ra, int16x2_t rb)
 {
   return __rv__v_scrsa16 (ra, rb);
 }
-/* { dg-final { scan-assembler-times "crsa16" 2 } } */
-/* { dg-final { scan-assembler-times "ucrsa16" 1 } } */
-/* { dg-final { scan-assembler-times "scrsa16" 1 } } */
+/* { dg-final { scan-assembler-times "crsa16" 4 } } */

@@ -18,5 +18,4 @@ int16x4_t u61arlsk_v (int16x4_t ra, uint32_t rb)
 {
   return __rv__v_kslra16_u (ra, rb);
 }
-/* { dg-final { scan-assembler-times "kslra16.u" 1 } } */
-/* { dg-final { scan-assembler-times "kslra16_u" 1 } } */
+/* { dg-final { scan-assembler-times "kslra16.u" 2 } } */

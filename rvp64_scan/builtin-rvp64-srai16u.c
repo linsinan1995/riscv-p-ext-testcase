@@ -18,4 +18,4 @@ int16x4_t u61iars_v (int16x4_t ra)
 {
   return __rv__v_sra16_u (ra, 4);
 }
-/* { dg-final { scan-assembler-times "sra16_u" 2 } } */
+/* { dg-final { scan-assembler-times "sra16.u" 2 } } */

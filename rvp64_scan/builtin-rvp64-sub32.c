@@ -25,6 +25,4 @@ int32x2_t buss_v (int32x2_t ra, int32x2_t rb)
 {
   return __rv__v_ssub32 (ra, rb);
 }
-/* { dg-final { scan-assembler-times "sub32" 2 } } */
-/* { dg-final { scan-assembler-times "usub32" 1 } } */
-/* { dg-final { scan-assembler-times "ssub32" 1 } } */
+/* { dg-final { scan-assembler-times "sub32" 4 } } */

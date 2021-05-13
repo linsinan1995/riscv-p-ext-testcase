@@ -24,6 +24,4 @@ int16x2_t sarcs_v (int16x2_t ra, int16x2_t rb)
 {
   return __rv__v_scras16 (ra, rb);
 }
-/* { dg-final { scan-assembler-times "cras16" 2 } } */
-/* { dg-final { scan-assembler-times "ucras16" 1 } } */
-/* { dg-final { scan-assembler-times "scras16" 1 } } */
+/* { dg-final { scan-assembler-times "cras16" 4 } } */

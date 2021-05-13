@@ -18,5 +18,4 @@ int32x2_t u23arlsk_v (int32x2_t ra, uint32_t rb)
 {
   return __rv__v_kslra32_u (ra, rb);
 }
-/* { dg-final { scan-assembler-times "kslra32.u" 1 } } */
-/* { dg-final { scan-assembler-times "kslra32_u" 1 } } */
+/* { dg-final { scan-assembler-times "kslra32.u" 2 } } */

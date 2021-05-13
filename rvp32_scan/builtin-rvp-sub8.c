@@ -24,6 +24,4 @@ int8x4_t buss_v (int8x4_t ra, int8x4_t rb)
 {
   return __rv__v_ssub8 (ra, rb);
 }
-/* { dg-final { scan-assembler-times "sub8" 2 } } */
-/* { dg-final { scan-assembler-times "usub8" 1 } } */
-/* { dg-final { scan-assembler-times "ssub8" 1 } } */
+/* { dg-final { scan-assembler-times "sub8" 4 } } */

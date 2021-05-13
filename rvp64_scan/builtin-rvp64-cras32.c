@@ -25,6 +25,4 @@ int32x2_t sarcs_v (int32x2_t ra, int32x2_t rb)
 {
   return __rv__v_scras32 (ra, rb);
 }
-/* { dg-final { scan-assembler-times "cras32" 2 } } */
-/* { dg-final { scan-assembler-times "ucras32" 1 } } */
-/* { dg-final { scan-assembler-times "scras32" 1 } } */
+/* { dg-final { scan-assembler-times "cras32" 4 } } */

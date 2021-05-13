@@ -24,6 +24,4 @@ uint16x2_t qepmcu_v (uint16x2_t ra, uint16x2_t rb)
 {
   return __rv__v_ucmpeq16 (ra, rb);
 }
-/* { dg-final { scan-assembler-times "cmpeq16" 2 } } */
-/* { dg-final { scan-assembler-times "scmpeq16" 1 } } */
-/* { dg-final { scan-assembler-times "ucmpeq16" 1 } } */
+/* { dg-final { scan-assembler-times "cmpeq16" 4 } } */

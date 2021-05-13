@@ -79,14 +79,15 @@ def regex_and_write(original_path, new_path, xlen):
                         inst_name = inst_name[2:]
 
                     # uadd8 -> add8
-                    elif inst_name[0] in ('s', 'u'):
+                    if inst_name[0] in ('s', 'u'):
                         if inst_name[1:4] == "add" or inst_name[1:4] == "sub":
                             inst_name = inst_name[1:]
                         elif inst_name[1:6] == "cmpeq":
                             inst_name = inst_name[1:]
                         elif inst_name[1:5] in ("cras", "crsa"):
                             inst_name = inst_name[1:]
-                    elif inst_name[-2:] == "_u":
+                    
+                    if inst_name[-2:] == "_u":
                         inst_name = inst_name[:-2] + ".u"
 
                     name_to_inst[inst_name].counter += 1

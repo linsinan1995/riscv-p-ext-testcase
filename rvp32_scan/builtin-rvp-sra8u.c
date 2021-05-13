@@ -17,4 +17,4 @@ int8x4_t u8ars_v (int8x4_t ra, uint32_t rb)
 {
   return __rv__v_sra8_u (ra, rb);
 }
-/* { dg-final { scan-assembler-times "sra8_u" 2 } } */
+/* { dg-final { scan-assembler-times "sra8.u" 2 } } */

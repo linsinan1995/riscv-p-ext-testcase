@@ -25,6 +25,4 @@ uint8x8_t qepmcu_v (uint8x8_t ra, uint8x8_t rb)
 {
   return __rv__v_ucmpeq8 (ra, rb);
 }
-/* { dg-final { scan-assembler-times "cmpeq8" 2 } } */
-/* { dg-final { scan-assembler-times "scmpeq8" 1 } } */
-/* { dg-final { scan-assembler-times "ucmpeq8" 1 } } */
+/* { dg-final { scan-assembler-times "cmpeq8" 4 } } */

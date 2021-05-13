@@ -11,4 +11,4 @@ int32_t u_lumms (int32_t ra, int32_t rb)
 {
   return __rv__smmul_u (ra, rb);
 }
-/* { dg-final { scan-assembler-times "smmul_u" 1 } } */
+/* { dg-final { scan-assembler-times "smmul.u" 1 } } */

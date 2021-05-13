@@ -17,4 +17,4 @@ int32_t u_bwmms_v (int32_t ra, int16x2_t rb)
 {
   return __rv__v_smmwb_u (ra, rb);
 }
-/* { dg-final { scan-assembler-times "smmwb_u" 2 } } */
+/* { dg-final { scan-assembler-times "smmwb.u" 2 } } */

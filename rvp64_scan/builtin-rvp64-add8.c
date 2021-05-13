@@ -25,6 +25,4 @@ int8x8_t ddas_v (int8x8_t ra, int8x8_t rb)
 {
   return __rv__v_sadd8 (ra, rb);
 }
-/* { dg-final { scan-assembler-times "add8" 2 } } */
-/* { dg-final { scan-assembler-times "uadd8" 1 } } */
-/* { dg-final { scan-assembler-times "sadd8" 1 } } */
+/* { dg-final { scan-assembler-times "add8" 4 } } */

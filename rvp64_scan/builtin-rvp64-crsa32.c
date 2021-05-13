@@ -25,6 +25,4 @@ int32x2_t asrcs_v (int32x2_t ra, int32x2_t rb)
 {
   return __rv__v_scrsa32 (ra, rb);
 }
-/* { dg-final { scan-assembler-times "crsa32" 2 } } */
-/* { dg-final { scan-assembler-times "ucrsa32" 1 } } */
-/* { dg-final { scan-assembler-times "scrsa32" 1 } } */
+/* { dg-final { scan-assembler-times "crsa32" 4 } } */

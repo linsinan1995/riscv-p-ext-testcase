@@ -18,4 +18,4 @@ uint16x4_t u_61ilrs_v (uint16x4_t ra)
 {
   return __rv__v_srl16_u (ra, 4);
 }
-/* { dg-final { scan-assembler-times "srl16_u" 2 } } */
+/* { dg-final { scan-assembler-times "srl16.u" 2 } } */

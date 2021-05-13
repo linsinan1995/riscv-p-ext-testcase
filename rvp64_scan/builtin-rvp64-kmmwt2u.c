@@ -18,5 +18,4 @@ int32x2_t u2twmmk_v (int32x2_t ra, int16x4_t rb)
 {
   return __rv__v_kmmwt2_u (ra, rb);
 }
-/* { dg-final { scan-assembler-times "kmmwt2.u" 1 } } */
-/* { dg-final { scan-assembler-times "kmmwt2_u" 1 } } */
+/* { dg-final { scan-assembler-times "kmmwt2.u" 2 } } */

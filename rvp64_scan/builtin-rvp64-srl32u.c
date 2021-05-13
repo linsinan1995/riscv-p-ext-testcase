@@ -18,4 +18,4 @@ uint32x2_t u23lrs_v (uint32x2_t ra, uint32_t rb)
 {
   return __rv__v_srl32_u (ra, rb);
 }
-/* { dg-final { scan-assembler-times "srl32_u" 2 } } */
+/* { dg-final { scan-assembler-times "srl32.u" 2 } } */

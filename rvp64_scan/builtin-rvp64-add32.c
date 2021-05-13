@@ -25,6 +25,4 @@ int32x2_t ddas_v (int32x2_t ra, int32x2_t rb)
 {
   return __rv__v_sadd32 (ra, rb);
 }
-/* { dg-final { scan-assembler-times "add32" 2 } } */
-/* { dg-final { scan-assembler-times "uadd32" 1 } } */
-/* { dg-final { scan-assembler-times "sadd32" 1 } } */
+/* { dg-final { scan-assembler-times "add32" 4 } } */
