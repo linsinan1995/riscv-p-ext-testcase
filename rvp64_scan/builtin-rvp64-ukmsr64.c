@@ -9,7 +9,7 @@
 #include <stdint.h>
 
 static __attribute__ ((noinline))
-uint64_t rsmku (uint64_t rd, unsigned long ra, unsigned long rb)
+uint64_t rsmku (uint64_t rd, uint64_t ra, uint64_t rb)
 {
   return __rv__ukmsr64 (rd, ra, rb);
 }

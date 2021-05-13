@@ -8,7 +8,7 @@
 
 #if defined(__riscv_zpn) && !defined(__riscv_32e)
 static __attribute__ ((noinline))
-uint32_t ursubw (unsigned int ra, unsigned int rb)
+uint32_t ursubw (uint32_t ra, uint32_t rb)
 {
   return __rv__ursubw (ra, rb);
 }

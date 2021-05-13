@@ -110,8 +110,8 @@ def regex_and_write(original_path, new_path, xlen):
         
         assert(len(name_to_inst.items()))
         for key, val in name_to_inst.items():
-            if key == "add64" and xlen == 64:
-                infos.append("/* add64 will generate 'add' in rv64p */\n")
+            if key in ("add64", "sub64") and xlen == 64:
+                infos.append(f"/* {key} will generate 'add' in rv64p */\n")
                 name_to_inst[key].counter = 0
 
             # instruction is included in file name

@@ -8,7 +8,7 @@
 #include <stdint.h>
 
 static __attribute__ ((noinline))
-uint64_t xlumu (unsigned long ra, unsigned long rb)
+uint64_t xlumu (uint32_t ra, uint32_t rb)
 {
   return __rv__umulx8 (ra, rb);
 }

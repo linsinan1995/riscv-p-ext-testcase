@@ -8,7 +8,7 @@
 #include <stdint.h>
 
 static __attribute__ ((noinline))
-int64_t adlsms (int64_t rt, unsigned long ra, unsigned long rb)
+int64_t adlsms (int64_t rt, uint32_t ra, uint32_t rb)
 {
   return __rv__smslda (rt, ra, rb);
 }

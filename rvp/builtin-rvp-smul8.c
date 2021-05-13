@@ -7,7 +7,7 @@
 
 #if defined(__riscv_zpsf) && !defined(__riscv_32e)
 static __attribute__ ((noinline))
-uint64_t smul8 (unsigned long ra, unsigned long rb)
+uint64_t smul8 (uint32_t ra, uint32_t rb)
 {
   return __rv__smul8 (ra, rb);
 }

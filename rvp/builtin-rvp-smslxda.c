@@ -7,7 +7,7 @@
 
 #if defined(__riscv_zpsf) && !defined(__riscv_32e)
 static __attribute__ ((noinline))
-int64_t smslxda (int64_t rt, unsigned long ra, unsigned long rb)
+int64_t smslxda (int64_t rt, uint32_t ra, uint32_t rb)
 {
   return __rv__smslxda (rt, ra, rb);
 }

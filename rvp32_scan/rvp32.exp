@@ -17,7 +17,7 @@
 # GCC testsuite that uses the `dg.exp' driver.
 
 # Exit immediately if this isn't a RISC-V target.
-if ![istarget riscv*-*-*] then {
+if ![istarget riscv32*-*-*] then {
   return
 }
 

@@ -7,7 +7,7 @@
 
 #if defined(__riscv_zpsf) && !defined(__riscv_32e)
 static __attribute__ ((noinline))
-unsigned long wext (int64_t ra, unsigned long rb)
+uint32_t wext (int64_t ra, uint32_t rb)
 {
   return __rv__wext (ra, rb);
 }

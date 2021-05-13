@@ -8,7 +8,7 @@
 
 #if defined(__riscv_zpsf) && !defined(__riscv_32e)
 static __attribute__ ((noinline))
-int64_t smalxda (int64_t t, unsigned long a, unsigned long b)
+int64_t smalxda (int64_t t, uint64_t a, uint64_t b)
 {
   return __rv__smalxda (t, a, b);
 }

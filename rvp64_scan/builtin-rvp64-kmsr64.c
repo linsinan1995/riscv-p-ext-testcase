@@ -9,7 +9,7 @@
 #include <stdint.h>
 
 static __attribute__ ((noinline))
-int64_t rsmk (int64_t rd, long ra, long rb)
+int64_t rsmk (int64_t rd, int64_t ra, int64_t rb)
 {
   return __rv__kmsr64 (rd, ra, rb);
 }

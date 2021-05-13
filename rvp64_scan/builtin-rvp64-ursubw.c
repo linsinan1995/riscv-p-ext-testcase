@@ -9,7 +9,7 @@
 #include <stdint.h>
 
 static __attribute__ ((noinline))
-uint32_t wbusru (unsigned int ra, unsigned int rb)
+uint32_t wbusru (uint32_t ra, uint32_t rb)
 {
   return __rv__ursubw (ra, rb);
 }

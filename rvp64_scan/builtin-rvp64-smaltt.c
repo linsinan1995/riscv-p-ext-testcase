@@ -9,7 +9,7 @@
 #include <stdint.h>
 
 static __attribute__ ((noinline))
-int64_t ttlams (int64_t t, unsigned long a, unsigned long b)
+int64_t ttlams (int64_t t, uint64_t a, uint64_t b)
 {
   return __rv__smaltt (t, a, b);
 }

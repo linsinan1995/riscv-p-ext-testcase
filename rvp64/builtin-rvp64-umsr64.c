@@ -8,7 +8,7 @@
 
 #if defined(__riscv_zpsf) && !defined(__riscv_32e)
 static __attribute__ ((noinline))
-uint64_t umsr64 (uint64_t rd, unsigned long ra, unsigned long rb)
+uint64_t umsr64 (uint64_t rd, uint64_t ra, uint64_t rb)
 {
   return __rv__umsr64 (rd, ra, rb);
 }

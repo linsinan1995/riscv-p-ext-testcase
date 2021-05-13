@@ -8,7 +8,7 @@
 #include <stdint.h>
 
 static __attribute__ ((noinline))
-uint64_t xlums (unsigned long ra, unsigned long rb)
+uint64_t xlums (uint32_t ra, uint32_t rb)
 {
   return __rv__smulx16 (ra, rb);
 }
