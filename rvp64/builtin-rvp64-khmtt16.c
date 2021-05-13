@@ -10,7 +10,7 @@
 static __attribute__ ((noinline))
 int32_t khmtt16 (uint32_t ra, uint32_t rb)
 {
-  return __builtin_riscv_khmtt16 (ra, rb);
+  return __rv__khmtt16 (ra, rb);
 }
 
 static __attribute__ ((noinline))

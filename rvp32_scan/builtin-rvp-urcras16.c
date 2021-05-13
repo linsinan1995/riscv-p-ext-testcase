@@ -1,3 +1,4 @@
+/* urcras16 also appears on filename, so scan-assembler-times plus 1 */
 /* This is a test program for urcras16 instruction.  */
 /* { dg-do compile { target riscv32*-*-* } } */
 /* { dg-options } "-march=rv32i_zpn -mabi=ilp32 -O2" */

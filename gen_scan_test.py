@@ -26,6 +26,7 @@ def regex_and_write(original_path, new_path, xlen):
         func_name = None
         name_to_inst = defaultdict(Inst)
         name_change = []
+        infos = []
         
         # do not forget there is an attribute like .file   "testadd.c"
         out_file_name = out_path.split('/')[1]
@@ -78,16 +79,18 @@ def regex_and_write(original_path, new_path, xlen):
                         inst_name = inst_name[2:]
 
                     # uadd8 -> add8
-                    if inst_name[0] in ('s', 'u'):
+                    elif inst_name[0] in ('s', 'u'):
                         if inst_name[1:4] == "add" or inst_name[1:4] == "sub":
                             inst_name = inst_name[1:]
                         elif inst_name[1:6] == "cmpeq":
                             inst_name = inst_name[1:]
                         elif inst_name[1:5] in ("cras", "crsa"):
                             inst_name = inst_name[1:]
+                    elif inst_name[-2:] == "_u":
+                        inst_name = inst_name[:-2] + ".u"
 
                     name_to_inst[inst_name].counter += 1
-
+                    
                     continue
 
                 if idx > 0 and "__attribute__" in content[idx-1]:
@@ -106,10 +109,16 @@ def regex_and_write(original_path, new_path, xlen):
         
         assert(len(name_to_inst.items()))
         for key, val in name_to_inst.items():
+            if key == "add64" and xlen == 64:
+                infos.append("/* add64 will generate 'add' in rv64p */\n")
+                name_to_inst[key].counter = 0
+
             # instruction is included in file name
             val.inst_in_filename |= key in out_file_name
             total_time = val.counter + val.inst_in_filename
             out_content.insert(len(out_content), "/* { dg-final { scan-assembler-times \"" + key + '" ' + str(total_time) + " } } */\n")
+            if val.inst_in_filename:
+                infos.append(f"/* {key} also appears on filename, so scan-assembler-times plus 1 */\n")
 
         # change function name
         for idx, line in enumerate(out_content):
@@ -128,12 +137,15 @@ def regex_and_write(original_path, new_path, xlen):
             else:
                 raise PermissionError("unreachable area!")
         else:
-            subset = "zpn_zpsf_zprv"
+            subset = "zpn_zprv_zpsf"
         
         abi = "lp64" if xlen == 64 else "ilp32"
         opt_level = opt_level if opt_level else '2'
         out_content.insert(1, "/* { dg-do compile { target riscv"+ str(xlen) +"*-*-* } } */\n")
         out_content.insert(2, "/* { dg-options } " + "\""+ f"-march=rv{xlen}i_{subset} -mabi={abi} -O{opt_level}" + '" */\n')
+
+        for info in infos:
+            out_content.insert(0, info)
 
         with open(out_path, "w") as f:
             f.writelines(out_content)

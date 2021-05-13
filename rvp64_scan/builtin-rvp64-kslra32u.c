@@ -1,6 +1,6 @@
 /* This is a test program for kslra32.u instruction.  */
 /* { dg-do compile { target riscv64*-*-* } } */
-/* { dg-options } "-march=rv64i_zpn_zpsf_zprv -mabi=lp64 -O2" */
+/* { dg-options } "-march=rv64i_zpn_zprv_zpsf -mabi=lp64 -O2" */
 
 
 #include <rvp_intrinsic.h>
@@ -18,4 +18,5 @@ int32x2_t u23arlsk_v (int32x2_t ra, uint32_t rb)
 {
   return __rv__v_kslra32_u (ra, rb);
 }
-/* { dg-final { scan-assembler-times "kslra32_u" 2 } } */
+/* { dg-final { scan-assembler-times "kslra32.u" 1 } } */
+/* { dg-final { scan-assembler-times "kslra32_u" 1 } } */

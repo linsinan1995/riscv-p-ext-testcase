@@ -1,6 +1,7 @@
+/* crsa16 also appears on filename, so scan-assembler-times plus 1 */
 /* This is a test program for crsa16 instruction.  */
 /* { dg-do compile { target riscv64*-*-* } } */
-/* { dg-options } "-march=rv64i_zpn_zpsf_zprv -mabi=lp64 -O2" */
+/* { dg-options } "-march=rv64i_zpn_zprv_zpsf -mabi=lp64 -O2" */
 
 
 #include <rvp_intrinsic.h>
@@ -24,4 +25,6 @@ int16x4_t asrcs_v (int16x4_t ra, int16x4_t rb)
 {
   return __rv__v_scrsa16 (ra, rb);
 }
-/* { dg-final { scan-assembler-times "crsa16" 4 } } */
+/* { dg-final { scan-assembler-times "crsa16" 2 } } */
+/* { dg-final { scan-assembler-times "ucrsa16" 1 } } */
+/* { dg-final { scan-assembler-times "scrsa16" 1 } } */
