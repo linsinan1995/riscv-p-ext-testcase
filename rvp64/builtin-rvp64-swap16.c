@@ -1,4 +1,4 @@
-/* This is a test program for wsbh instruction.  */
+/* This is a test program for swap16 instruction.  */
 /* { dg-do run { target { riscv64*-*-* } } } */
 /* { dg-options "-O0" } */
 

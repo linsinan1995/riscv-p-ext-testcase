@@ -1,4 +1,4 @@
-/* This is a test program for wsbh instruction.  */
+/* This is a test program for swap16 instruction.  */
 /* { dg-do compile { target riscv64*-*-* } } */
 /* { dg-options } "-march=rv64i_zpn_zprv_zpsf -mabi=lp64 -O2" */
 /* { dg-options "-O0" } */
@@ -12,7 +12,6 @@ uint64_t paws (uint64_t a)
 {
   return __rv__swap16 (a);
 }
-
 
 static __attribute__ ((noinline))
 uint16x4_t paws_v (uint16x4_t a)

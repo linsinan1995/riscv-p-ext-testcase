@@ -25,7 +25,6 @@ FAIL: gcc.dg/pr63594-2.c (internal compiler error)
 FAIL: gcc.dg/pr63594-2.c (test for excess errors)
 FAIL: gcc.dg/pr95713.c (internal compiler error)
 FAIL: gcc.dg/pr95713.c (test for excess errors)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-cmpeq16.c (test for excess errors)
 FAIL: gcc.target/riscv/rvp64/builtin-rvp64-insb.c (internal compiler error)
 FAIL: gcc.target/riscv/rvp64/builtin-rvp64-insb.c (test for excess errors)
 FAIL: gcc.target/riscv/rvp64/builtin-rvp64-kdmbb.c (internal compiler error)
@@ -43,7 +42,6 @@ FAIL: gcc.target/riscv/rvp64/builtin-rvp64-sclip32.c (test for excess errors)
 FAIL: gcc.target/riscv/rvp64/builtin-rvp64-slli32.c (internal compiler error)
 FAIL: gcc.target/riscv/rvp64/builtin-rvp64-slli32.c (test for excess errors)
 FAIL: gcc.target/riscv/rvp64/builtin-rvp64-smal.c (test for excess errors)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-smslxda.c (test for excess errors)
 FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srai16.c (internal compiler error)
 FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srai16.c (test for excess errors)
 FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srai16u.c (internal compiler error)
@@ -72,5 +70,5 @@ FAIL: gcc.target/riscv/rvp64/builtin-rvp64-uclip32.c (test for excess errors)
                ========= Summary of gcc testsuite =========
                             | # of unexpected case / # of unique unexpected case
                             |          gcc |          g++ |     gfortran |
- rv64i_zpn_zprv_zpsf/   lp64/ medlow |   61 /    28 |    4 /     2 |      - |
+ rv64i_zpn_zprv_zpsf/   lp64/ medlow |   59 /    26 |    4 /     2 |      - |
 Makefile:913: recipe for target 'report-gcc-newlib' failed
