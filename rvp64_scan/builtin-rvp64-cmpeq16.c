@@ -9,7 +9,7 @@
 #include <stdint.h>
 
 static __attribute__ ((noinline))
-uint32_t qepmc (uint32_t ra, uint32_t rb)
+uint64_t qepmc (uint64_t ra, uint64_t rb)
 {
   return __rv__cmpeq16 (ra, rb);
 }

@@ -113,6 +113,9 @@ def regex_and_write(original_path, new_path, xlen):
             if key in ("add64", "sub64") and xlen == 64:
                 infos.append(f"/* {key} will generate 'add' in rv64p */\n")
                 name_to_inst[key].counter = 0
+            
+            if key == "swap16":
+                key = "pkbt16"
 
             # instruction is included in file name
             val.inst_in_filename |= key in out_file_name

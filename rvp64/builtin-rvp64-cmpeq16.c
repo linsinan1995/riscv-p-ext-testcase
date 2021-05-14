@@ -8,7 +8,7 @@
 
 #if defined(__riscv_zpn) && !defined(__riscv_32e)
 static __attribute__ ((noinline))
-uint32_t cmpeq16 (uint32_t ra, uint32_t rb)
+uint64_t cmpeq16 (uint64_t ra, uint64_t rb)
 {
   return __rv__cmpeq16 (ra, rb);
 }

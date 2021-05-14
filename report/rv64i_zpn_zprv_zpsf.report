@@ -1,3 +1,5 @@
+# commit 83e60d03f8ceb22be5bc64efb96c160ef2c0a457
+
 /home/sinan/plct/riscv-gnu-toolchain/scripts/testsuite-filter gcc newlib /home/sinan/plct/riscv-gnu-toolchain/test/allowlist `find build-gcc-newlib-stage2/gcc/testsuite/ -name *.sum |paste -sd "," -`
 		=== g++: Unexpected fails for rv64i_zpn_zprv_zpsf lp64 medlow ===
 FAIL: tmpdir-g++.dg-struct-layout-1/t055 cp_compat_x_tst.o compile,  (internal compiler error)
