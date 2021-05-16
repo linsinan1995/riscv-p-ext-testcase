@@ -1,30 +1,8 @@
-# commit 83e60d03f8ceb22be5bc64efb96c160ef2c0a457
+commit db67a911fc614dbec4e22314d37249b8f6f91069
+host ubuntu 18.04
 
 /home/sinan/plct/riscv-gnu-toolchain/scripts/testsuite-filter gcc newlib /home/sinan/plct/riscv-gnu-toolchain/test/allowlist `find build-gcc-newlib-stage2/gcc/testsuite/ -name *.sum |paste -sd "," -`
-		=== g++: Unexpected fails for rv64i_zpn_zprv_zpsf lp64 medlow ===
-FAIL: tmpdir-g++.dg-struct-layout-1/t055 cp_compat_x_tst.o compile,  (internal compiler error)
-FAIL: tmpdir-g++.dg-struct-layout-1/t055 cp_compat_y_tst.o compile,  (internal compiler error)
-FAIL: g++.dg/tree-ssa/pr88152-1.C   (internal compiler error)
-FAIL: g++.dg/tree-ssa/pr88152-1.C   (test for excess errors)
 		=== gcc: Unexpected fails for rv64i_zpn_zprv_zpsf lp64 medlow ===
-FAIL: gcc.c-torture/execute/20050316-1.c   -O1  (internal compiler error)
-FAIL: gcc.c-torture/execute/20050316-1.c   -O1  (test for excess errors)
-FAIL: gcc.c-torture/execute/20050316-1.c   -O2  (internal compiler error)
-FAIL: gcc.c-torture/execute/20050316-1.c   -O2  (test for excess errors)
-FAIL: gcc.c-torture/execute/20050316-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error)
-FAIL: gcc.c-torture/execute/20050316-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
-FAIL: gcc.c-torture/execute/20050316-1.c   -O3 -g  (internal compiler error)
-FAIL: gcc.c-torture/execute/20050316-1.c   -O3 -g  (test for excess errors)
-FAIL: gcc.c-torture/execute/20050316-1.c   -Os  (internal compiler error)
-FAIL: gcc.c-torture/execute/20050316-1.c   -Os  (test for excess errors)
-FAIL: gcc.dg/compat/vector-1 c_compat_x_tst.o compile,  (internal compiler error)
-FAIL: gcc.dg/compat/vector-1 c_compat_y_tst.o compile,  (internal compiler error)
-FAIL: gcc.dg/pr63594-1.c (internal compiler error)
-FAIL: gcc.dg/pr63594-1.c (test for excess errors)
-FAIL: gcc.dg/pr63594-2.c (internal compiler error)
-FAIL: gcc.dg/pr63594-2.c (test for excess errors)
-FAIL: gcc.dg/pr95713.c (internal compiler error)
-FAIL: gcc.dg/pr95713.c (test for excess errors)
 FAIL: gcc.target/riscv/rvp64/builtin-rvp64-insb.c (internal compiler error)
 FAIL: gcc.target/riscv/rvp64/builtin-rvp64-insb.c (test for excess errors)
 FAIL: gcc.target/riscv/rvp64/builtin-rvp64-kdmbb.c (internal compiler error)
@@ -41,7 +19,6 @@ FAIL: gcc.target/riscv/rvp64/builtin-rvp64-sclip32.c (internal compiler error)
 FAIL: gcc.target/riscv/rvp64/builtin-rvp64-sclip32.c (test for excess errors)
 FAIL: gcc.target/riscv/rvp64/builtin-rvp64-slli32.c (internal compiler error)
 FAIL: gcc.target/riscv/rvp64/builtin-rvp64-slli32.c (test for excess errors)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-smal.c (test for excess errors)
 FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srai16.c (internal compiler error)
 FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srai16.c (test for excess errors)
 FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srai16u.c (internal compiler error)
@@ -52,8 +29,6 @@ FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srai32u.c (internal compiler error)
 FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srai32u.c (test for excess errors)
 FAIL: gcc.target/riscv/rvp64/builtin-rvp64-sraiu.c (internal compiler error)
 FAIL: gcc.target/riscv/rvp64/builtin-rvp64-sraiu.c (test for excess errors)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srl16.c (internal compiler error)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srl16.c (test for excess errors)
 FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srli16.c (internal compiler error)
 FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srli16.c (test for excess errors)
 FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srli16u.c (internal compiler error)
@@ -70,5 +45,5 @@ FAIL: gcc.target/riscv/rvp64/builtin-rvp64-uclip32.c (test for excess errors)
                ========= Summary of gcc testsuite =========
                             | # of unexpected case / # of unique unexpected case
                             |          gcc |          g++ |     gfortran |
- rv64i_zpn_zprv_zpsf/   lp64/ medlow |   59 /    26 |    4 /     2 |      - |
+ rv64i_zpn_zprv_zpsf/   lp64/ medlow |   38 /    19 |    0 /     0 |      - |
 Makefile:913: recipe for target 'report-gcc-newlib' failed

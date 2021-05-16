@@ -1,0 +1,39 @@
+commit db67a911fc614dbec4e22314d37249b8f6f91069
+host ubuntu 18.04
+
+/home/sinan/plct/riscv-gnu-toolchain/scripts/testsuite-filter gcc newlib /home/sinan/plct/riscv-gnu-toolchain/test/allowlist `find build-gcc-newlib-stage2/gcc/testsuite/ -name *.sum |paste -sd "," -`
+		=== gcc: Unexpected fails for rv32i_zpn_zpsf ilp32 medlow ===
+FAIL: gcc.target/riscv/rvp32_scan/builtin-rvp-insb.c (internal compiler error)
+FAIL: gcc.target/riscv/rvp32_scan/builtin-rvp-insb.c (test for excess errors)
+FAIL: gcc.target/riscv/rvp32_scan/builtin-rvp-pbsad.c scan-assembler-times pbsad 2
+FAIL: gcc.target/riscv/rvp32_scan/builtin-rvp-pbsada.c scan-assembler-times pbsada 2
+FAIL: gcc.target/riscv/rvp32_scan/builtin-rvp-sclip8.c (internal compiler error)
+FAIL: gcc.target/riscv/rvp32_scan/builtin-rvp-sclip8.c (test for excess errors)
+FAIL: gcc.target/riscv/rvp32_scan/builtin-rvp-smar64.c scan-assembler-times smar64 2
+FAIL: gcc.target/riscv/rvp32_scan/builtin-rvp-smdrs.c (internal compiler error)
+FAIL: gcc.target/riscv/rvp32_scan/builtin-rvp-smdrs.c (test for excess errors)
+FAIL: gcc.target/riscv/rvp32_scan/builtin-rvp-smds.c (internal compiler error)
+FAIL: gcc.target/riscv/rvp32_scan/builtin-rvp-smds.c (test for excess errors)
+FAIL: gcc.target/riscv/rvp32_scan/builtin-rvp-smmul.c (internal compiler error)
+FAIL: gcc.target/riscv/rvp32_scan/builtin-rvp-smmul.c (test for excess errors)
+FAIL: gcc.target/riscv/rvp32_scan/builtin-rvp-smxds.c (internal compiler error)
+FAIL: gcc.target/riscv/rvp32_scan/builtin-rvp-smxds.c (test for excess errors)
+FAIL: gcc.target/riscv/rvp32_scan/builtin-rvp-srai16.c (internal compiler error)
+FAIL: gcc.target/riscv/rvp32_scan/builtin-rvp-srai16.c (test for excess errors)
+FAIL: gcc.target/riscv/rvp32_scan/builtin-rvp-srai16u.c (internal compiler error)
+FAIL: gcc.target/riscv/rvp32_scan/builtin-rvp-srai16u.c (test for excess errors)
+FAIL: gcc.target/riscv/rvp32_scan/builtin-rvp-sraiu.c (internal compiler error)
+FAIL: gcc.target/riscv/rvp32_scan/builtin-rvp-sraiu.c (test for excess errors)
+FAIL: gcc.target/riscv/rvp32_scan/builtin-rvp-srli16.c (internal compiler error)
+FAIL: gcc.target/riscv/rvp32_scan/builtin-rvp-srli16.c (test for excess errors)
+FAIL: gcc.target/riscv/rvp32_scan/builtin-rvp-srli16u.c (internal compiler error)
+FAIL: gcc.target/riscv/rvp32_scan/builtin-rvp-srli16u.c (test for excess errors)
+FAIL: gcc.target/riscv/rvp32_scan/builtin-rvp-uclip8.c (internal compiler error)
+FAIL: gcc.target/riscv/rvp32_scan/builtin-rvp-uclip8.c (test for excess errors)
+FAIL: gcc.target/riscv/rvp32_scan/builtin-rvp-umar64.c scan-assembler-times umar64 2
+
+               ========= Summary of gcc testsuite =========
+                            | # of unexpected case / # of unique unexpected case
+                            |          gcc |          g++ |     gfortran |
+ rv32i_zpn_zpsf/  ilp32/ medlow |   28 /    16 |    0 /     0 |      - |
+Makefile:913: recipe for target 'report-gcc-newlib' failed
