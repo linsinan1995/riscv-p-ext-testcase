@@ -1,7 +1,6 @@
 /* This is a test program for swap16 instruction.  */
 /* { dg-do compile { target riscv64*-*-* } } */
-/* { dg-options } "-march=rv64i_zpn_zprv_zpsf -mabi=lp64 -O2" */
-/* { dg-options "-O0" } */
+/* { dg-options } "-march=rv64i_zpn_zprv_zpsf -mabi=lp64 -O0" */
 
 #include <rvp_intrinsic.h>
 #include <stdlib.h>
