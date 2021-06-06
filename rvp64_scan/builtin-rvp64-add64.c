@@ -2,7 +2,7 @@
 /* add64 will generate 'add' in rv64p */
 /* This is a test program for add64 instruction.  */
 /* { dg-do compile { target riscv64*-*-* } } */
-/* { dg-options } "-march=rv64i_zpn_zprv_zpsf -mabi=lp64 -O2" */
+/* { dg-options "-march=rv64i_zpn_zprv_zpsf -mabi=lp64 -O0" } */
 
 
 #include <rvp_intrinsic.h>
@@ -21,3 +21,4 @@ uint64_t ddau (uint64_t ra, uint64_t rb)
   return __rv__uadd64 (ra, rb);
 }
 /* { dg-final { scan-assembler-times "add64" 1 } } */
+/* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */
