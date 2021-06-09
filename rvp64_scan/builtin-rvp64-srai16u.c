@@ -8,7 +8,7 @@
 #include <stdint.h>
 
 static __attribute__ ((noinline))
-uint32_t u61iars (uint32_t ra)
+uint64_t u61iars (uint64_t ra)
 {
   return __rv__sra16_u (ra, 4);
 }

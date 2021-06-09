@@ -8,7 +8,7 @@
 #include <stdint.h>
 
 static __attribute__ ((noinline))
-int illsk (int ra)
+int32_t illsk (int32_t ra)
 {
   return __rv__ksllw (ra, 8);
 }

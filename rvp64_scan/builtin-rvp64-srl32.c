@@ -9,7 +9,7 @@
 #include <stdint.h>
 
 static __attribute__ ((noinline))
-uint32_t lrs (uint32_t ra, uint32_t rb)
+uint64_t lrs (uint64_t ra, uint32_t rb)
 {
   return __rv__srl32 (ra, rb);
 }

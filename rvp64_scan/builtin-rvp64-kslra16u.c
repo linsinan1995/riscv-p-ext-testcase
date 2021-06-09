@@ -8,7 +8,7 @@
 #include <stdint.h>
 
 static __attribute__ ((noinline))
-uint32_t u61arlsk (uint32_t ra, uint32_t rb)
+uint64_t u61arlsk (uint64_t ra, uint32_t rb)
 {
   return __rv__kslra16_u (ra, rb);
 }

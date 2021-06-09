@@ -9,7 +9,7 @@
 #include <stdint.h>
 
 static __attribute__ ((noinline))
-uint32_t llsk (uint32_t ra, uint32_t rb)
+uint64_t llsk (uint64_t ra, uint32_t rb)
 {
   return __rv__ksll32 (ra, rb);
 }

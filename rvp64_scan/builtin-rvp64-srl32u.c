@@ -8,7 +8,7 @@
 #include <stdint.h>
 
 static __attribute__ ((noinline))
-uint32_t u23lrs (uint32_t ra, uint32_t rb)
+uint64_t u23lrs (uint64_t ra, uint32_t rb)
 {
   return __rv__srl32_u (ra, rb);
 }
