@@ -9,7 +9,7 @@
 #include <stdint.h>
 
 static __attribute__ ((noinline))
-uint32_t tlpmcu (uint32_t ra, uint32_t rb)
+uint64_t tlpmcu (uint64_t ra, uint64_t rb)
 {
   return __rv__ucmplt16 (ra, rb);
 }

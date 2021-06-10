@@ -9,7 +9,7 @@
 #include <stdint.h>
 
 static __attribute__ ((noinline))
-int32_t pilcu (int32_t ra)
+int64_t pilcu (int64_t ra)
 {
   return __rv__uclip32 (ra, 5);
 }
