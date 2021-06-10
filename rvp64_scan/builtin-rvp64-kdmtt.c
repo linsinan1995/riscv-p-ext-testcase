@@ -15,7 +15,7 @@ int32_t ttmdk (int ra, int rb)
 }
 
 static __attribute__ ((noinline))
-int32_t ttmdk_v (int16x2_t ra, int16x2_t rb)
+int32_t ttmdk_v (int16x4_t ra, int16x4_t rb)
 {
   return __rv__v_kdmtt (ra, rb);
 }
