@@ -9,7 +9,7 @@
 #include <stdint.h>
 
 static __attribute__ ((noinline))
-int32_t pilcs (int32_t ra)
+int64_t pilcs (int64_t ra)
 {
   return __rv__sclip16 (ra, 2);
 }
