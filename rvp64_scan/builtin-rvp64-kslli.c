@@ -12,5 +12,5 @@ int32_t illsk (int32_t ra)
 {
   return __rv__ksllw (ra, 8);
 }
-/* { dg-final { scan-assembler-times "ksllw" 1 } } */
+/* { dg-final { scan-assembler-times "kslliw" 1 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

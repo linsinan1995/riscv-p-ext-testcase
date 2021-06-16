@@ -11,5 +11,5 @@ int uiars (int ra)
 {
   return __rv__sra_u (ra, 8);
 }
-/* { dg-final { scan-assembler-times "sra.u" 1 } } */
+/* { dg-final { scan-assembler-times "srai.u" 1 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

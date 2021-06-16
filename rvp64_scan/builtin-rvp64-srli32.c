@@ -18,5 +18,5 @@ uint32x2_t ilrs_v (uint32x2_t ra)
 {
   return __rv__v_srl32 (ra, 4);
 }
-/* { dg-final { scan-assembler-times "srl32" 2 } } */
+/* { dg-final { scan-assembler-times "srli32" 3 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

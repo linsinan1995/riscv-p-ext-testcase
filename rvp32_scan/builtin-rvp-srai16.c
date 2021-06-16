@@ -17,5 +17,5 @@ int16x2_t iars_v (int16x2_t ra)
 {
   return __rv__v_sra16 (ra, 4);
 }
-/* { dg-final { scan-assembler-times "sra16" 2 } } */
+/* { dg-final { scan-assembler-times "srai16" 3 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

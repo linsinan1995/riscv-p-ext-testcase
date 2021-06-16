@@ -18,5 +18,5 @@ uint16x4_t ilrs_v (uint16x4_t ra)
 {
   return __rv__v_srl16 (ra, 4);
 }
-/* { dg-final { scan-assembler-times "srl16" 2 } } */
+/* { dg-final { scan-assembler-times "srli16" 3 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

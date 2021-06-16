@@ -18,5 +18,5 @@ int32x2_t u23iars_v (int32x2_t ra)
 {
   return __rv__v_sra32_u (ra, 4);
 }
-/* { dg-final { scan-assembler-times "sra32.u" 2 } } */
+/* { dg-final { scan-assembler-times "srai32.u" 2 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */
