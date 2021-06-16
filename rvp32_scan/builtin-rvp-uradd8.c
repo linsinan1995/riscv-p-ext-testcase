@@ -10,13 +10,13 @@
 static __attribute__ ((noinline))
 uint32_t ddaru (uint32_t ra, uint32_t rb)
 {
-  return __rv__uradd8 (ra, rb);
+  return __rv_uradd8 (ra, rb);
 }
 
 static __attribute__ ((noinline))
 uint8x4_t ddaru_v (uint8x4_t ra, uint8x4_t rb)
 {
-  return __rv__v_uradd8 (ra, rb);
+  return __rv_v_uradd8 (ra, rb);
 }
 /* { dg-final { scan-assembler-times "uradd8" 3 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

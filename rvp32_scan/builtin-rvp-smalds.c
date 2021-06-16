@@ -10,13 +10,13 @@
 static __attribute__ ((noinline))
 int64_t sdlams (int64_t t, uint32_t a, uint32_t b)
 {
-  return __rv__smalds (t, a, b);
+  return __rv_smalds (t, a, b);
 }
 
 static __attribute__ ((noinline))
 int64_t sdlams_v (int64_t t, int16x2_t a, int16x2_t b)
 {
-  return __rv__v_smalds (t, a, b);
+  return __rv_v_smalds (t, a, b);
 }
 
 /* { dg-final { scan-assembler-times "smalds" 3 } } */

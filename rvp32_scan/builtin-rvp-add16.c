@@ -10,19 +10,19 @@
 static __attribute__ ((noinline))
 uint32_t dda (uint32_t ra, uint32_t rb)
 {
-  return __rv__add16 (ra, rb);
+  return __rv_add16 (ra, rb);
 }
 
 static __attribute__ ((noinline))
 uint16x2_t ddau_v (uint16x2_t ra, uint16x2_t rb)
 {
-  return __rv__v_uadd16 (ra, rb);
+  return __rv_v_uadd16 (ra, rb);
 }
 
 static __attribute__ ((noinline))
 int16x2_t ddas_v (int16x2_t ra, int16x2_t rb)
 {
-  return __rv__v_sadd16 (ra, rb);
+  return __rv_v_sadd16 (ra, rb);
 }
 /* { dg-final { scan-assembler-times "add16" 4 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

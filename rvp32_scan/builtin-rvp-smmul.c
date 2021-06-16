@@ -10,7 +10,7 @@
 static __attribute__ ((noinline))
 int32_t lumms (int32_t ra, int32_t rb)
 {
-  return __rv__smmul (ra, rb);
+  return __rv_smmul (ra, rb);
 }
 /* { dg-final { scan-assembler-times "smmul" 2 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

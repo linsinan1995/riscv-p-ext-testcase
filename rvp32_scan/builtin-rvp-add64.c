@@ -10,13 +10,13 @@
 static __attribute__ ((noinline))
 int64_t ddas (int64_t ra, int64_t rb)
 {
-  return __rv__sadd64 (ra, rb);
+  return __rv_sadd64 (ra, rb);
 }
 
 static __attribute__ ((noinline))
 uint64_t ddau (uint64_t ra, uint64_t rb)
 {
-  return __rv__uadd64 (ra, rb);
+  return __rv_uadd64 (ra, rb);
 }
 /* { dg-final { scan-assembler-times "add64" 3 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

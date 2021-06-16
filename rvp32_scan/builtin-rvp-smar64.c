@@ -10,7 +10,7 @@
 static __attribute__ ((noinline))
 int64_t rams (int64_t t, int a, int b)
 {
-  return __rv__smar64 (t, a, b);
+  return __rv_smar64 (t, a, b);
 }
 /* { dg-final { scan-assembler-times "smar64" 2 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

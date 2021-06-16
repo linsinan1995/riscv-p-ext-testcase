@@ -10,13 +10,13 @@
 static __attribute__ ((noinline))
 uint32_t tlpmcu (uint32_t ra, uint32_t rb)
 {
-  return __rv__ucmplt16 (ra, rb);
+  return __rv_ucmplt16 (ra, rb);
 }
 
 static __attribute__ ((noinline))
 uint16x2_t tlpmcu_v (uint16x2_t ra, uint16x2_t rb)
 {
-  return __rv__v_ucmplt16 (ra, rb);
+  return __rv_v_ucmplt16 (ra, rb);
 }
 /* { dg-final { scan-assembler-times "ucmplt16" 3 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

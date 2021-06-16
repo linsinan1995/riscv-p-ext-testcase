@@ -10,13 +10,13 @@
 static __attribute__ ((noinline))
 uint32_t pilcu (uint32_t ra)
 {
-  return __rv__uclip8 (ra, 2);
+  return __rv_uclip8 (ra, 2);
 }
 
 static __attribute__ ((noinline))
 uint8x4_t pilcu_v (uint8x4_t ra)
 {
-  return __rv__v_uclip8 (ra, 3);
+  return __rv_v_uclip8 (ra, 3);
 }
 /* { dg-final { scan-assembler-times "uclip8" 3 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

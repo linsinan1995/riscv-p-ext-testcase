@@ -10,7 +10,7 @@
 static __attribute__ ((noinline))
 uint32_t vertib (uint32_t ra, uint32_t rb)
 {
-  return __rv__bitrev (ra, rb);
+  return __rv_bitrev (ra, rb);
 }
 /* { dg-final { scan-assembler-times "bitrev" 2 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

@@ -9,13 +9,13 @@
 static __attribute__ ((noinline))
 uint32_t u8ars (uint32_t ra, uint32_t rb)
 {
-  return __rv__sra8_u (ra, rb);
+  return __rv_sra8_u (ra, rb);
 }
 
 static __attribute__ ((noinline))
 int8x4_t u8ars_v (int8x4_t ra, uint32_t rb)
 {
-  return __rv__v_sra8_u (ra, rb);
+  return __rv_v_sra8_u (ra, rb);
 }
 /* { dg-final { scan-assembler-times "sra8.u" 2 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

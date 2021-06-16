@@ -10,7 +10,7 @@
 static __attribute__ ((noinline))
 uint32_t kcipb (uint32_t ra, uint32_t rb, uint32_t rc)
 {
-  return __rv__bpick (ra, rb, rc);
+  return __rv_bpick (ra, rb, rc);
 }
 /* { dg-final { scan-assembler-times "bpick" 2 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

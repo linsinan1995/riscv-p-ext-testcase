@@ -10,7 +10,7 @@
 static __attribute__ ((noinline))
 uint32_t wddaru (uint32_t ra, uint32_t rb)
 {
-  return __rv__uraddw (ra, rb);
+  return __rv_uraddw (ra, rb);
 }
 /* { dg-final { scan-assembler-times "uraddw" 2 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

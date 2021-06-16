@@ -1,7 +1,7 @@
 /* kabs16 also appears on filename, so scan-assembler-times plus 1 */
 /* This is a test program for kabs16 instruction.  */
 /* { dg-do compile { target riscv64*-*-* } } */
-/* { dg-options "-march=rv64i_zpn_zprv_zpsf -mabi=lp64 -O0" } */
+/* { dg-options "-march=rv64i_zpn_zpsf -mabi=lp64 -O0" } */
 
 
 #include <rvp_intrinsic.h>
@@ -9,15 +9,15 @@
 #include <stdint.h>
 
 static __attribute__ ((noinline))
-uint32_t sbak (uint32_t ra)
+uint64_t sbak (uint64_t ra)
 {
-  return __rv__kabs16 (ra);
+  return __rv_kabs16 (ra);
 }
 
 static __attribute__ ((noinline))
 int16x4_t sbak_v (int16x4_t ra)
 {
-  return __rv__v_kabs16 (ra);
+  return __rv_v_kabs16 (ra);
 }
 /* { dg-final { scan-assembler-times "kabs16" 3 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

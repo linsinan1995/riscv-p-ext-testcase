@@ -10,7 +10,7 @@
 static __attribute__ ((noinline))
 uint32_t paws (uint32_t a)
 {
-  return __rv__swap8 (a);
+  return __rv_swap8 (a);
 }
 /* { dg-final { scan-assembler-times "swap8" 2 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

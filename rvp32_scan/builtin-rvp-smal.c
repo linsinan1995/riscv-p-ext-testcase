@@ -10,13 +10,13 @@
 static __attribute__ ((noinline))
 int64_t lams (int64_t ra, uint32_t rb)
 {
-  return __rv__smal (ra, rb);
+  return __rv_smal (ra, rb);
 }
 
 static __attribute__ ((noinline))
 int64_t lams_v (int64_t ra, int16x2_t rb)
 {
-  return __rv__v_smal (ra, rb);
+  return __rv_v_smal (ra, rb);
 }
 /* { dg-final { scan-assembler-times "smal" 3 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

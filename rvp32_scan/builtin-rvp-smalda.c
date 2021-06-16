@@ -10,13 +10,13 @@
 static __attribute__ ((noinline))
 int64_t adlams (int64_t t, uint32_t a, uint32_t b)
 {
-  return __rv__smalda (t, a, b);
+  return __rv_smalda (t, a, b);
 }
 
 static __attribute__ ((noinline))
 int64_t adlams_v (int64_t t, int16x2_t a, int16x2_t b)
 {
-  return __rv__v_smalda (t, a, b);
+  return __rv_v_smalda (t, a, b);
 }
 
 /* { dg-final { scan-assembler-times "smalda" 3 } } */

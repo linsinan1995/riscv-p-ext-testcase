@@ -10,7 +10,7 @@
 static __attribute__ ((noinline))
 int32_t wbusr (int32_t ra, int32_t rb)
 {
-  return __rv__rsubw (ra, rb);
+  return __rv_rsubw (ra, rb);
 }
 /* { dg-final { scan-assembler-times "rsubw" 2 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

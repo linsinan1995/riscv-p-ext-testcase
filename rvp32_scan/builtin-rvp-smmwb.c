@@ -10,13 +10,13 @@
 static __attribute__ ((noinline))
 int32_t bwmms (int32_t ra, uint32_t rb)
 {
-  return __rv__smmwb (ra, rb);
+  return __rv_smmwb (ra, rb);
 }
 
 static __attribute__ ((noinline))
 int32_t bwmms_v (int32_t ra, int16x2_t rb)
 {
-  return __rv__v_smmwb (ra, rb);
+  return __rv_v_smmwb (ra, rb);
 }
 /* { dg-final { scan-assembler-times "smmwb" 3 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

@@ -10,7 +10,7 @@
 static __attribute__ ((noinline))
 int64_t busr (int64_t ra, int64_t rb)
 {
-  return __rv__rsub64 (ra, rb);
+  return __rv_rsub64 (ra, rb);
 }
 /* { dg-final { scan-assembler-times "rsub64" 2 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

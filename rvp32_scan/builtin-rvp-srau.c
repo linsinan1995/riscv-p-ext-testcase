@@ -9,7 +9,7 @@
 static __attribute__ ((noinline))
 int uars (int ra, uint32_t rb)
 {
-  return __rv__sra_u (ra, rb);
+  return __rv_sra_u (ra, rb);
 }
 /* { dg-final { scan-assembler-times "sra.u" 1 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

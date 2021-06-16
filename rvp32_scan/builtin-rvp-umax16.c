@@ -10,13 +10,13 @@
 static __attribute__ ((noinline))
 uint32_t xamu (uint32_t ra, uint32_t rb)
 {
-  return __rv__umax16 (ra, rb);
+  return __rv_umax16 (ra, rb);
 }
 
 static __attribute__ ((noinline))
 uint16x2_t xamu_v (uint16x2_t ra, uint16x2_t rb)
 {
-  return __rv__v_umax16 (ra, rb);
+  return __rv_v_umax16 (ra, rb);
 }
 /* { dg-final { scan-assembler-times "umax16" 3 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

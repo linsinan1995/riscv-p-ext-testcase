@@ -10,13 +10,13 @@
 static __attribute__ ((noinline))
 uint32_t busr (uint32_t ra, uint32_t rb)
 {
-  return __rv__rsub8 (ra, rb);
+  return __rv_rsub8 (ra, rb);
 }
 
 static __attribute__ ((noinline))
 int8x4_t busr_v (int8x4_t ra, int8x4_t rb)
 {
-  return __rv__v_rsub8 (ra, rb);
+  return __rv_v_rsub8 (ra, rb);
 }
 /* { dg-final { scan-assembler-times "rsub8" 3 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

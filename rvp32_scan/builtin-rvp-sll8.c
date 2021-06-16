@@ -10,13 +10,13 @@
 static __attribute__ ((noinline))
 uint32_t lls (uint32_t ra, uint32_t rb)
 {
-  return __rv__sll8 (ra, rb);
+  return __rv_sll8 (ra, rb);
 }
 
 static __attribute__ ((noinline))
 uint8x4_t lls_v (uint8x4_t ra, uint32_t rb)
 {
-  return __rv__v_sll8 (ra, rb);
+  return __rv_v_sll8 (ra, rb);
 }
 /* { dg-final { scan-assembler-times "sll8" 3 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

@@ -10,7 +10,7 @@
 static __attribute__ ((noinline))
 uint32_t bsni (uint32_t ra, uint32_t rb)
 {
-  return __rv__insb (ra, rb, 1);
+  return __rv_insb (ra, rb, 1);
 }
 /* { dg-final { scan-assembler-times "insb" 2 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

@@ -10,13 +10,13 @@
 static __attribute__ ((noinline))
 int32_t pilcs (int32_t ra)
 {
-  return __rv__sclip8 (ra, 2);
+  return __rv_sclip8 (ra, 2);
 }
 
 static __attribute__ ((noinline))
 int8x4_t pilcs_v (int8x4_t ra)
 {
-  return __rv__v_sclip8 (ra, 3);
+  return __rv_v_sclip8 (ra, 3);
 }
 /* { dg-final { scan-assembler-times "sclip8" 3 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

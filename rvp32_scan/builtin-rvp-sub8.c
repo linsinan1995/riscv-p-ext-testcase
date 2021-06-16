@@ -10,19 +10,19 @@
 static __attribute__ ((noinline))
 uint32_t bus (uint32_t ra, uint32_t rb)
 {
-  return __rv__sub8 (ra, rb);
+  return __rv_sub8 (ra, rb);
 }
 
 static __attribute__ ((noinline))
 uint8x4_t busu_v (uint8x4_t ra, uint8x4_t rb)
 {
-  return __rv__v_usub8 (ra, rb);
+  return __rv_v_usub8 (ra, rb);
 }
 
 static __attribute__ ((noinline))
 int8x4_t buss_v (int8x4_t ra, int8x4_t rb)
 {
-  return __rv__v_ssub8 (ra, rb);
+  return __rv_v_ssub8 (ra, rb);
 }
 /* { dg-final { scan-assembler-times "sub8" 4 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

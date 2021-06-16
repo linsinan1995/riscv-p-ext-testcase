@@ -10,13 +10,13 @@
 static __attribute__ ((noinline))
 uint32_t dkpnus (uint32_t a)
 {
-  return __rv__sunpkd831 (a);
+  return __rv_sunpkd831 (a);
 }
 
 static __attribute__ ((noinline))
 int16x2_t dkpnus_v (int8x4_t a)
 {
-  return __rv__v_sunpkd831 (a);
+  return __rv_v_sunpkd831 (a);
 }
 /* { dg-final { scan-assembler-times "sunpkd831" 3 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

@@ -10,7 +10,7 @@
 static __attribute__ ((noinline))
 uint32_t dasbp (uint32_t ra, uint32_t rb)
 {
-  return __rv__pbsad (ra, rb);
+  return __rv_pbsad (ra, rb);
 }
 /* { dg-final { scan-assembler-times "pbsad" 2 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

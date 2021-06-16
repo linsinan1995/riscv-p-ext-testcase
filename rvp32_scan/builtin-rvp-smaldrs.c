@@ -10,13 +10,13 @@
 static __attribute__ ((noinline))
 int64_t srdlams (int64_t t, uint32_t a, uint32_t b)
 {
-  return __rv__smaldrs (t, a, b);
+  return __rv_smaldrs (t, a, b);
 }
 
 static __attribute__ ((noinline))
 int64_t srdlams_v (int64_t t, int16x2_t a, int16x2_t b)
 {
-  return __rv__v_smaldrs (t, a, b);
+  return __rv_v_smaldrs (t, a, b);
 }
 
 /* { dg-final { scan-assembler-times "smaldrs" 3 } } */

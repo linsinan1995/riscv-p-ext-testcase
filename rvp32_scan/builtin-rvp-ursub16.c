@@ -10,13 +10,13 @@
 static __attribute__ ((noinline))
 uint32_t busru (uint32_t ra, uint32_t rb)
 {
-  return __rv__ursub16 (ra, rb);
+  return __rv_ursub16 (ra, rb);
 }
 
 static __attribute__ ((noinline))
 uint16x2_t busru_v (uint16x2_t ra, uint16x2_t rb)
 {
-  return __rv__v_ursub16 (ra, rb);
+  return __rv_v_ursub16 (ra, rb);
 }
 /* { dg-final { scan-assembler-times "ursub16" 3 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

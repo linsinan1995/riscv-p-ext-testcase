@@ -9,13 +9,13 @@
 static __attribute__ ((noinline))
 int32_t u_twmms (int32_t ra, uint32_t rb)
 {
-  return __rv__smmwt_u (ra, rb);
+  return __rv_smmwt_u (ra, rb);
 }
 
 static __attribute__ ((noinline))
 int32_t u_twmms_v (int32_t ra, int16x2_t rb)
 {
-  return __rv__v_smmwt_u (ra, rb);
+  return __rv_v_smmwt_u (ra, rb);
 }
 /* { dg-final { scan-assembler-times "smmwt.u" 2 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

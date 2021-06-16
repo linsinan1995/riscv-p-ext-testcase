@@ -10,7 +10,7 @@
 static __attribute__ ((noinline))
 int32_t eva (int32_t ra, int32_t rb)
 {
-  return __rv__ave (ra, rb);
+  return __rv_ave (ra, rb);
 }
 
 /* { dg-final { scan-assembler-times "ave" 2 } } */

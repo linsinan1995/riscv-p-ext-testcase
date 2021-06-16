@@ -10,7 +10,7 @@
 static __attribute__ ((noinline))
 uint32_t txew (int64_t ra, uint32_t rb)
 {
-  return __rv__wext (ra, rb);
+  return __rv_wext (ra, rb);
 }
 /* { dg-final { scan-assembler-times "wext" 2 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

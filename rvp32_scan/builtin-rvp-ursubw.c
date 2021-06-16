@@ -10,7 +10,7 @@
 static __attribute__ ((noinline))
 uint32_t wbusru (unsigned int ra,unsigned int rb)
 {
-  return __rv__ursubw (ra, rb);
+  return __rv_ursubw (ra, rb);
 }
 /* { dg-final { scan-assembler-times "ursubw" 2 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

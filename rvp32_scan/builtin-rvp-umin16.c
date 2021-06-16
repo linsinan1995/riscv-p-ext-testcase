@@ -10,13 +10,13 @@
 static __attribute__ ((noinline))
 uint32_t nimu (uint32_t ra, uint32_t rb)
 {
-  return __rv__umin16 (ra, rb);
+  return __rv_umin16 (ra, rb);
 }
 
 static __attribute__ ((noinline))
 uint16x2_t nimu_v (uint16x2_t ra, uint16x2_t rb)
 {
-  return __rv__v_umin16 (ra, rb);
+  return __rv_v_umin16 (ra, rb);
 }
 /* { dg-final { scan-assembler-times "umin16" 3 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

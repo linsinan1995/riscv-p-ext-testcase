@@ -10,7 +10,7 @@
 static __attribute__ ((noinline))
 uint64_t ramu (uint64_t t,unsigned int a,unsigned int b)
 {
-  return __rv__umar64 (t, a, b);
+  return __rv_umar64 (t, a, b);
 }
 /* { dg-final { scan-assembler-times "umar64" 2 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */
