@@ -1,49 +1,992 @@
-commit db67a911fc614dbec4e22314d37249b8f6f91069
-host ubuntu 18.04
-
 /home/sinan/plct/riscv-gnu-toolchain/scripts/testsuite-filter gcc newlib /home/sinan/plct/riscv-gnu-toolchain/test/allowlist `find build-gcc-newlib-stage2/gcc/testsuite/ -name *.sum |paste -sd "," -`
+		=== g++: Unexpected fails for rv64i_zpn_zprv_zpsf lp64 medlow ===
+FAIL: c-c++-common/ffile-prefix-map.c  -std=gnu++14 execution test
+FAIL: c-c++-common/ffile-prefix-map.c  -std=gnu++17 execution test
+FAIL: c-c++-common/ffile-prefix-map.c  -std=gnu++2a execution test
+FAIL: c-c++-common/ffile-prefix-map.c  -std=gnu++98 execution test
+FAIL: c-c++-common/fmacro-prefix-map.c  -std=gnu++14 execution test
+FAIL: c-c++-common/fmacro-prefix-map.c  -std=gnu++17 execution test
+FAIL: c-c++-common/fmacro-prefix-map.c  -std=gnu++2a execution test
+FAIL: c-c++-common/fmacro-prefix-map.c  -std=gnu++98 execution test
+FAIL: c-c++-common/pr85822.c  -std=gnu++14 execution test
+FAIL: c-c++-common/pr85822.c  -std=gnu++17 execution test
+FAIL: c-c++-common/pr85822.c  -std=gnu++2a execution test
+FAIL: c-c++-common/pr85822.c  -std=gnu++98 execution test
+FAIL: g++.dg/cpp0x/constexpr-tuple.C  -std=c++14 execution test
+FAIL: g++.dg/cpp0x/constexpr-tuple.C  -std=c++17 execution test
+FAIL: g++.dg/cpp0x/constexpr-tuple.C  -std=c++2a execution test
+FAIL: g++.dg/cpp0x/nullptr20.C  -std=c++14 execution test
+FAIL: g++.dg/cpp0x/nullptr20.C  -std=c++17 execution test
+FAIL: g++.dg/cpp0x/nullptr20.C  -std=c++2a execution test
+FAIL: g++.dg/cpp0x/udlit-macros.C  -std=c++14 execution test
+FAIL: g++.dg/cpp0x/udlit-macros.C  -std=c++17 execution test
+FAIL: g++.dg/cpp0x/udlit-macros.C  -std=c++2a execution test
+FAIL: g++.dg/ext/stmtexpr1.C  -std=gnu++14 execution test
+FAIL: g++.dg/ext/stmtexpr1.C  -std=gnu++17 execution test
+FAIL: g++.dg/ext/stmtexpr1.C  -std=gnu++2a execution test
+FAIL: g++.dg/ext/stmtexpr1.C  -std=gnu++98 execution test
+FAIL: g++.dg/ext/stmtexpr2.C  -std=gnu++14 execution test
+FAIL: g++.dg/ext/stmtexpr2.C  -std=gnu++17 execution test
+FAIL: g++.dg/ext/stmtexpr2.C  -std=gnu++2a execution test
+FAIL: g++.dg/ext/stmtexpr2.C  -std=gnu++98 execution test
+FAIL: g++.dg/ext/vla9.C  -std=gnu++14 execution test
+FAIL: g++.dg/ext/vla9.C  -std=gnu++17 execution test
+FAIL: g++.dg/ext/vla9.C  -std=gnu++2a execution test
+FAIL: g++.dg/ext/vla9.C  -std=gnu++98 execution test
+FAIL: g++.dg/init/elide3.C  -std=c++14 execution test
+FAIL: g++.dg/init/elide3.C  -std=c++17 execution test
+FAIL: g++.dg/init/elide3.C  -std=c++2a execution test
+FAIL: g++.dg/init/elide3.C  -std=c++98 execution test
+FAIL: g++.dg/init/for1.C  -std=c++14 execution test
+FAIL: g++.dg/init/for1.C  -std=c++17 execution test
+FAIL: g++.dg/init/for1.C  -std=c++2a execution test
+FAIL: g++.dg/init/for1.C  -std=c++98 execution test
+FAIL: g++.dg/ipa/pr84658.C   execution test
+FAIL: g++.dg/opt/alias2.C  -std=gnu++14 execution test
+FAIL: g++.dg/opt/alias2.C  -std=gnu++17 execution test
+FAIL: g++.dg/opt/alias2.C  -std=gnu++2a execution test
+FAIL: g++.dg/opt/alias2.C  -std=gnu++98 execution test
+FAIL: g++.dg/opt/nrv13.C  -std=gnu++14 execution test
+FAIL: g++.dg/opt/nrv13.C  -std=gnu++17 execution test
+FAIL: g++.dg/opt/nrv13.C  -std=gnu++2a execution test
+FAIL: g++.dg/opt/nrv13.C  -std=gnu++98 execution test
+FAIL: g++.dg/opt/pmf1.C  -std=gnu++14 execution test
+FAIL: g++.dg/opt/pmf1.C  -std=gnu++17 execution test
+FAIL: g++.dg/opt/pmf1.C  -std=gnu++2a execution test
+FAIL: g++.dg/opt/pmf1.C  -std=gnu++98 execution test
+FAIL: g++.dg/opt/tmp1.C  -std=c++14 execution test
+FAIL: g++.dg/opt/tmp1.C  -std=c++17 execution test
+FAIL: g++.dg/opt/tmp1.C  -std=c++2a execution test
+FAIL: g++.dg/opt/tmp1.C  -std=c++98 execution test
+FAIL: g++.dg/tc1/dr20.C  -std=c++14 execution test
+FAIL: g++.dg/tc1/dr20.C  -std=c++17 execution test
+FAIL: g++.dg/tc1/dr20.C  -std=c++2a execution test
+FAIL: g++.dg/tc1/dr20.C  -std=c++98 execution test
+FAIL: c-c++-common/torture/vector-shift.c   -O1  execution test
+FAIL: c-c++-common/torture/vector-shift.c   -O2  execution test
+FAIL: c-c++-common/torture/vector-shift.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: c-c++-common/torture/vector-shift.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: c-c++-common/torture/vector-shift.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: c-c++-common/torture/vector-shift.c   -O3 -g  execution test
+FAIL: c-c++-common/torture/vector-shift.c   -Os  execution test
+FAIL: c-c++-common/torture/vector-shift1.c   -O0  execution test
+FAIL: g++.dg/torture/stackalign/throw-1.C   -Os  execution test
+FAIL: g++.dg/torture/stackalign/throw-1.C   -Os -fpic execution test
+FAIL: g++.dg/torture/stackalign/throw-2.C   -Os  execution test
+FAIL: g++.dg/torture/stackalign/throw-2.C   -Os -fpic execution test
+FAIL: g++.dg/torture/stackalign/throw-3.C   -Os  execution test
+FAIL: g++.dg/torture/stackalign/throw-3.C   -Os -fpic execution test
+FAIL: g++.dg/torture/stackalign/throw-4.C   -Os  execution test
+FAIL: g++.dg/torture/stackalign/throw-4.C   -Os -fpic execution test
+FAIL: g++.old-deja/g++.abi/vbase1.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.abi/vbase1.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.abi/vbase1.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.abi/vbase1.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.abi/vtable3a.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.abi/vtable3a.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.abi/vtable3a.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.abi/vtable3a.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.abi/vtable3b.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.abi/vtable3b.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.abi/vtable3b.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.abi/vtable3b.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.abi/vtable3c.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.abi/vtable3c.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.abi/vtable3c.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.abi/vtable3c.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.abi/vtable3d.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.abi/vtable3d.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.abi/vtable3d.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.abi/vtable3d.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.abi/vtable3e.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.abi/vtable3e.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.abi/vtable3e.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.abi/vtable3e.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.abi/vtable3f.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.abi/vtable3f.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.abi/vtable3f.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.abi/vtable3f.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.abi/vtable3g.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.abi/vtable3g.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.abi/vtable3g.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.abi/vtable3g.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.abi/vtable3h.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.abi/vtable3h.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.abi/vtable3h.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.abi/vtable3h.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.abi/vtable3i.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.abi/vtable3i.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.abi/vtable3i.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.abi/vtable3i.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.abi/vtable3j.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.abi/vtable3j.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.abi/vtable3j.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.abi/vtable3j.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.brendan/nest21.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.brendan/nest21.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.brendan/nest21.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.brendan/nest21.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.eh/cleanup2.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.eh/cleanup2.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.eh/cleanup2.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.eh/cleanup2.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.eh/flow1.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.eh/flow1.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.eh/flow1.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.eh/flow1.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.eh/ptr1.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.eh/ptr1.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.eh/ptr1.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.eh/ptr1.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.eh/rethrow1.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.eh/rethrow1.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.eh/rethrow1.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.eh/rethrow1.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.eh/rethrow2.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.eh/rethrow2.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.eh/rethrow2.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.eh/rethrow2.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.eh/rethrow3.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.eh/rethrow3.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.eh/rethrow3.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.eh/rethrow3.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.eh/rethrow4.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.eh/rethrow4.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.eh/rethrow4.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.eh/rethrow4.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.eh/rethrow5.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.eh/rethrow5.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.eh/rethrow5.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.eh/rethrow5.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.eh/rethrow6.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.eh/rethrow6.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.eh/rethrow6.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.eh/rethrow6.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.ext/pretty2.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.ext/pretty2.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.ext/pretty2.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.ext/pretty2.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.ext/pretty3.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.ext/pretty3.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.ext/pretty3.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.ext/pretty3.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.jason/cleanup.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.jason/cleanup.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.jason/cleanup.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.jason/cleanup.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.jason/conversion6.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.jason/conversion6.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.jason/conversion6.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.jason/conversion6.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.jason/defctor.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.jason/defctor.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.jason/defctor.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.jason/defctor.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.jason/groff1.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.jason/groff1.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.jason/groff1.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.jason/groff1.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.jason/opeq5.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.jason/opeq5.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.jason/opeq5.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.jason/opeq5.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.jason/parse10.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.jason/parse10.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.jason/parse10.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.jason/parse10.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.jason/template26.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.jason/template26.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.jason/template26.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.jason/template26.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.jason/template41.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.jason/template41.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.jason/template41.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.jason/template41.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.jason/temporary3.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.jason/temporary3.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.jason/temporary3.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.jason/temporary3.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.jason/temporary8.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.jason/temporary8.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.jason/temporary8.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.jason/temporary8.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.jason/typeid2.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.jason/typeid2.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.jason/typeid2.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.jason/typeid2.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.mike/net16.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.mike/net16.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.mike/net16.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.mike/net16.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.mike/net35.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.mike/net35.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.mike/net35.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.mike/net35.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.mike/offset1.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.mike/offset1.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.mike/offset1.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.mike/offset1.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.mike/p11667.C  -std=gnu++14 execution test
+FAIL: g++.old-deja/g++.mike/p11667.C  -std=gnu++17 execution test
+FAIL: g++.old-deja/g++.mike/p11667.C  -std=gnu++2a execution test
+FAIL: g++.old-deja/g++.mike/p11667.C  -std=gnu++98 execution test
+FAIL: g++.old-deja/g++.mike/p1567.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.mike/p1567.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.mike/p1567.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.mike/p1567.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.mike/p3139.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.mike/p3139.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.mike/p3139.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.mike/p3139.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.mike/p3579.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.mike/p3579.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.mike/p3579.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.mike/p3579.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.mike/p789.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.mike/p789.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.mike/p789.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.mike/p789.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.mike/p789a.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.mike/p789a.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.mike/p789a.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.mike/p789a.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.mike/pmf2.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.mike/pmf2.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.mike/pmf2.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.mike/pmf2.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.mike/temp.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.mike/temp.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.mike/temp.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.mike/temp.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.other/init11.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.other/init11.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.other/init11.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.other/init11.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.other/optimize2.C  -std=gnu++14 execution test
+FAIL: g++.old-deja/g++.other/optimize2.C  -std=gnu++17 execution test
+FAIL: g++.old-deja/g++.other/optimize2.C  -std=gnu++2a execution test
+FAIL: g++.old-deja/g++.other/optimize2.C  -std=gnu++98 execution test
+FAIL: g++.old-deja/g++.other/temporary1.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.other/temporary1.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.other/temporary1.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.other/temporary1.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.other/vbase5.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.other/vbase5.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.other/vbase5.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.other/vbase5.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.other/virtual8.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.other/virtual8.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.other/virtual8.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.other/virtual8.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.other/vtbl2.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.other/vtbl2.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.other/vtbl2.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.other/vtbl2.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.pt/t16.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.pt/t16.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.pt/t16.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.pt/t16.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.pt/t39.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.pt/t39.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.pt/t39.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.pt/t39.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.pt/tiemann2.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.pt/tiemann2.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.pt/tiemann2.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.pt/tiemann2.C  -std=c++98 execution test
+FAIL: g++.old-deja/g++.robertl/eb17.C  -std=c++14 execution test
+FAIL: g++.old-deja/g++.robertl/eb17.C  -std=c++17 execution test
+FAIL: g++.old-deja/g++.robertl/eb17.C  -std=c++2a execution test
+FAIL: g++.old-deja/g++.robertl/eb17.C  -std=c++98 execution test
 		=== gcc: Unexpected fails for rv64i_zpn_zprv_zpsf lp64 medlow ===
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-insb.c (internal compiler error)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-insb.c (test for excess errors)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-kdmbb.c (internal compiler error)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-kdmbb.c (test for excess errors)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-kdmbt.c (internal compiler error)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-kdmbt.c (test for excess errors)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-kdmtt.c (internal compiler error)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-kdmtt.c (test for excess errors)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-kslli.c (internal compiler error)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-kslli.c (test for excess errors)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-sclip16.c (internal compiler error)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-sclip16.c (test for excess errors)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-sclip32.c (internal compiler error)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-sclip32.c (test for excess errors)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-slli32.c (internal compiler error)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-slli32.c (test for excess errors)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srai16.c (internal compiler error)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srai16.c (test for excess errors)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srai16u.c (internal compiler error)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srai16u.c (test for excess errors)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srai32.c (internal compiler error)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srai32.c (test for excess errors)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srai32u.c (internal compiler error)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srai32u.c (test for excess errors)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-sraiu.c (internal compiler error)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-sraiu.c (test for excess errors)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srli16.c (internal compiler error)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srli16.c (test for excess errors)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srli16u.c (internal compiler error)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srli16u.c (test for excess errors)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srli32.c (internal compiler error)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srli32.c (test for excess errors)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srli32u.c (internal compiler error)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-srli32u.c (test for excess errors)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-uclip16.c (internal compiler error)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-uclip16.c (test for excess errors)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-uclip32.c (internal compiler error)
-FAIL: gcc.target/riscv/rvp64/builtin-rvp64-uclip32.c (test for excess errors)
+FAIL: gcc.c-torture/execute/builtins/abs-1.c execution,  -O0
+FAIL: gcc.c-torture/execute/builtins/abs-1.c execution,  -O1
+FAIL: gcc.c-torture/execute/builtins/abs-1.c execution,  -O2
+FAIL: gcc.c-torture/execute/builtins/abs-1.c execution,  -O3 -g
+FAIL: gcc.c-torture/execute/builtins/abs-1.c execution,  -Og -g
+FAIL: gcc.c-torture/execute/builtins/abs-1.c execution,  -Os
+FAIL: gcc.c-torture/execute/builtins/abs-2.c execution,  -O0
+FAIL: gcc.c-torture/execute/builtins/abs-2.c execution,  -O1
+FAIL: gcc.c-torture/execute/builtins/abs-2.c execution,  -O2
+FAIL: gcc.c-torture/execute/builtins/abs-2.c execution,  -O2 -flto -fno-use-linker-plugin -flto-partition=none
+FAIL: gcc.c-torture/execute/builtins/abs-2.c execution,  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects
+FAIL: gcc.c-torture/execute/builtins/abs-2.c execution,  -O3 -g
+FAIL: gcc.c-torture/execute/builtins/abs-2.c execution,  -Og -g
+FAIL: gcc.c-torture/execute/builtins/abs-2.c execution,  -Os
+FAIL: gcc.c-torture/execute/builtins/abs-3.c execution,  -O0
+FAIL: gcc.c-torture/execute/builtins/abs-3.c execution,  -O1
+FAIL: gcc.c-torture/execute/builtins/abs-3.c execution,  -O2
+FAIL: gcc.c-torture/execute/builtins/abs-3.c execution,  -O2 -flto -fno-use-linker-plugin -flto-partition=none
+FAIL: gcc.c-torture/execute/builtins/abs-3.c execution,  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects
+FAIL: gcc.c-torture/execute/builtins/abs-3.c execution,  -O3 -g
+FAIL: gcc.c-torture/execute/builtins/abs-3.c execution,  -Og -g
+FAIL: gcc.c-torture/execute/builtins/abs-3.c execution,  -Os
+FAIL: gcc.c-torture/execute/builtins/pr23484-chk.c execution,  -O1
+FAIL: gcc.c-torture/execute/builtins/pr23484-chk.c execution,  -O2
+FAIL: gcc.c-torture/execute/builtins/pr23484-chk.c execution,  -O2 -flto -fno-use-linker-plugin -flto-partition=none
+FAIL: gcc.c-torture/execute/builtins/pr23484-chk.c execution,  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects
+FAIL: gcc.c-torture/execute/builtins/pr23484-chk.c execution,  -O3 -g
+FAIL: gcc.c-torture/execute/builtins/pr23484-chk.c execution,  -Og -g
+FAIL: gcc.c-torture/execute/builtins/pr23484-chk.c execution,  -Os
+FAIL: gcc.c-torture/execute/builtins/snprintf-chk.c execution,  -O1
+FAIL: gcc.c-torture/execute/builtins/snprintf-chk.c execution,  -O2
+FAIL: gcc.c-torture/execute/builtins/snprintf-chk.c execution,  -O2 -flto -fno-use-linker-plugin -flto-partition=none
+FAIL: gcc.c-torture/execute/builtins/snprintf-chk.c execution,  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects
+FAIL: gcc.c-torture/execute/builtins/snprintf-chk.c execution,  -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions
+FAIL: gcc.c-torture/execute/builtins/snprintf-chk.c execution,  -O3 -g
+FAIL: gcc.c-torture/execute/builtins/snprintf-chk.c execution,  -Og -g
+FAIL: gcc.c-torture/execute/builtins/snprintf-chk.c execution,  -Os
+FAIL: gcc.c-torture/execute/builtins/sprintf-chk.c execution,  -O1
+FAIL: gcc.c-torture/execute/builtins/sprintf-chk.c execution,  -O2
+FAIL: gcc.c-torture/execute/builtins/sprintf-chk.c execution,  -O2 -flto -fno-use-linker-plugin -flto-partition=none
+FAIL: gcc.c-torture/execute/builtins/sprintf-chk.c execution,  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects
+FAIL: gcc.c-torture/execute/builtins/sprintf-chk.c execution,  -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions
+FAIL: gcc.c-torture/execute/builtins/sprintf-chk.c execution,  -O3 -g
+FAIL: gcc.c-torture/execute/builtins/sprintf-chk.c execution,  -Og -g
+FAIL: gcc.c-torture/execute/builtins/sprintf-chk.c execution,  -Os
+FAIL: gcc.c-torture/execute/builtins/sprintf.c execution,  -O0
+FAIL: gcc.c-torture/execute/builtins/vsnprintf-chk.c execution,  -O1
+FAIL: gcc.c-torture/execute/builtins/vsnprintf-chk.c execution,  -O2
+FAIL: gcc.c-torture/execute/builtins/vsnprintf-chk.c execution,  -O2 -flto -fno-use-linker-plugin -flto-partition=none
+FAIL: gcc.c-torture/execute/builtins/vsnprintf-chk.c execution,  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects
+FAIL: gcc.c-torture/execute/builtins/vsnprintf-chk.c execution,  -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions
+FAIL: gcc.c-torture/execute/builtins/vsnprintf-chk.c execution,  -O3 -g
+FAIL: gcc.c-torture/execute/builtins/vsnprintf-chk.c execution,  -Og -g
+FAIL: gcc.c-torture/execute/builtins/vsnprintf-chk.c execution,  -Os
+FAIL: gcc.c-torture/execute/builtins/vsprintf-chk.c execution,  -O1
+FAIL: gcc.c-torture/execute/builtins/vsprintf-chk.c execution,  -O2
+FAIL: gcc.c-torture/execute/builtins/vsprintf-chk.c execution,  -O2 -flto -fno-use-linker-plugin -flto-partition=none
+FAIL: gcc.c-torture/execute/builtins/vsprintf-chk.c execution,  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects
+FAIL: gcc.c-torture/execute/builtins/vsprintf-chk.c execution,  -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions
+FAIL: gcc.c-torture/execute/builtins/vsprintf-chk.c execution,  -O3 -g
+FAIL: gcc.c-torture/execute/builtins/vsprintf-chk.c execution,  -Og -g
+FAIL: gcc.c-torture/execute/builtins/vsprintf-chk.c execution,  -Os
+FAIL: gcc.c-torture/execute/20000224-1.c   -Os  execution test
+FAIL: gcc.c-torture/execute/20000412-4.c   -O0  execution test
+FAIL: gcc.c-torture/execute/20000412-4.c   -O1  execution test
+FAIL: gcc.c-torture/execute/20000412-4.c   -O2  execution test
+FAIL: gcc.c-torture/execute/20000412-4.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/20000412-4.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/20000412-4.c   -Os  execution test
+FAIL: gcc.c-torture/execute/20010221-1.c   -O0  execution test
+FAIL: gcc.c-torture/execute/20010221-1.c   -O1  execution test
+FAIL: gcc.c-torture/execute/20020213-1.c   -O0  execution test
+FAIL: gcc.c-torture/execute/20020213-1.c   -O1  execution test
+FAIL: gcc.c-torture/execute/20020213-1.c   -O2  execution test
+FAIL: gcc.c-torture/execute/20020213-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/20020213-1.c   -Os  execution test
+FAIL: gcc.c-torture/execute/20020406-1.c   -O0  execution test
+FAIL: gcc.c-torture/execute/20020406-1.c   -O1  execution test
+FAIL: gcc.c-torture/execute/20020406-1.c   -O2  execution test
+FAIL: gcc.c-torture/execute/20020406-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/20020406-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/20020406-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/20020406-1.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/20020406-1.c   -Os  execution test
+FAIL: gcc.c-torture/execute/20021010-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/20021010-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/20021010-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/20021010-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/20021010-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/20021120-3.c   -O0  execution test
+FAIL: gcc.c-torture/execute/20021120-3.c   -O1  execution test
+FAIL: gcc.c-torture/execute/20021120-3.c   -O2  execution test
+FAIL: gcc.c-torture/execute/20021120-3.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/20021120-3.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/20021120-3.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/20021120-3.c   -Os  execution test
+FAIL: gcc.c-torture/execute/20030626-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/20030717-1.c   -O0  execution test
+FAIL: gcc.c-torture/execute/20030717-1.c   -O1  execution test
+FAIL: gcc.c-torture/execute/20030717-1.c   -O2  execution test
+FAIL: gcc.c-torture/execute/20030717-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/20030717-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/20030717-1.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/20030717-1.c   -Os  execution test
+FAIL: gcc.c-torture/execute/20031011-1.c   -O0  execution test
+FAIL: gcc.c-torture/execute/20031214-1.c   -O0  execution test
+FAIL: gcc.c-torture/execute/20031214-1.c   -O1  execution test
+FAIL: gcc.c-torture/execute/20031214-1.c   -O2  execution test
+FAIL: gcc.c-torture/execute/20031214-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/20031214-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/20031214-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/20031214-1.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/20031214-1.c   -Os  execution test
+FAIL: gcc.c-torture/execute/20040319-1.c   -O0  execution test
+FAIL: gcc.c-torture/execute/20041126-1.c   -O0  execution test
+FAIL: gcc.c-torture/execute/20050604-1.c   -O0  execution test
+FAIL: gcc.c-torture/execute/20050604-1.c   -O1  execution test
+FAIL: gcc.c-torture/execute/20050604-1.c   -O2  execution test
+FAIL: gcc.c-torture/execute/20050604-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/20050604-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/20050604-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/20050604-1.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/20050604-1.c   -Os  execution test
+FAIL: gcc.c-torture/execute/20051215-1.c   -Os  execution test
+FAIL: gcc.c-torture/execute/20080506-1.c   -O0  execution test
+FAIL: gcc.c-torture/execute/20090113-1.c   -Os  execution test
+FAIL: gcc.c-torture/execute/20121108-1.c   -O0  execution test
+FAIL: gcc.c-torture/execute/20121108-1.c   -O1  execution test
+FAIL: gcc.c-torture/execute/20121108-1.c   -O2  execution test
+FAIL: gcc.c-torture/execute/20121108-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/20121108-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/20121108-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/20121108-1.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/20121108-1.c   -Os  execution test
+FAIL: gcc.c-torture/execute/920501-8.c   -O0  execution test
+FAIL: gcc.c-torture/execute/920501-8.c   -O1  execution test
+FAIL: gcc.c-torture/execute/920501-8.c   -O2  execution test
+FAIL: gcc.c-torture/execute/920501-8.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/920501-8.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/920501-8.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/920501-8.c   -Os  execution test
+FAIL: gcc.c-torture/execute/920501-9.c   -O0  execution test
+FAIL: gcc.c-torture/execute/920501-9.c   -O1  execution test
+FAIL: gcc.c-torture/execute/920501-9.c   -O2  execution test
+FAIL: gcc.c-torture/execute/920501-9.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/920501-9.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/920501-9.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/920501-9.c   -Os  execution test
+FAIL: gcc.c-torture/execute/920726-1.c   -O0  execution test
+FAIL: gcc.c-torture/execute/920726-1.c   -O1  execution test
+FAIL: gcc.c-torture/execute/920726-1.c   -O2  execution test
+FAIL: gcc.c-torture/execute/920726-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/920726-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/920726-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/920726-1.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/920726-1.c   -Os  execution test
+FAIL: gcc.c-torture/execute/930513-1.c   -O0  execution test
+FAIL: gcc.c-torture/execute/930513-1.c   -O1  execution test
+FAIL: gcc.c-torture/execute/930513-1.c   -O2  execution test
+FAIL: gcc.c-torture/execute/930513-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/930513-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/930513-1.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/930513-1.c   -Os  execution test
+FAIL: gcc.c-torture/execute/950612-1.c   -O0  execution test
+FAIL: gcc.c-torture/execute/950612-1.c   -O2  execution test
+FAIL: gcc.c-torture/execute/950612-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/950612-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/950612-1.c   -Os  execution test
+FAIL: gcc.c-torture/execute/980605-1.c   -O0  execution test
+FAIL: gcc.c-torture/execute/980605-1.c   -O1  execution test
+FAIL: gcc.c-torture/execute/980605-1.c   -O2  execution test
+FAIL: gcc.c-torture/execute/980605-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/980605-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/980605-1.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/980605-1.c   -Os  execution test
+FAIL: gcc.c-torture/execute/arith-rand-ll.c   -O0  execution test
+FAIL: gcc.c-torture/execute/arith-rand-ll.c   -O1  execution test
+FAIL: gcc.c-torture/execute/arith-rand-ll.c   -O2  execution test
+FAIL: gcc.c-torture/execute/arith-rand-ll.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/arith-rand-ll.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/arith-rand-ll.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/arith-rand-ll.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/arith-rand-ll.c   -Os  execution test
+FAIL: gcc.c-torture/execute/arith-rand.c   -O0  execution test
+FAIL: gcc.c-torture/execute/arith-rand.c   -O1  execution test
+FAIL: gcc.c-torture/execute/arith-rand.c   -O2  execution test
+FAIL: gcc.c-torture/execute/arith-rand.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/arith-rand.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/arith-rand.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/arith-rand.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/arith-rand.c   -Os  execution test
+FAIL: gcc.c-torture/execute/fprintf-1.c   -O0  execution test
+FAIL: gcc.c-torture/execute/fprintf-1.c   -O1  execution test
+FAIL: gcc.c-torture/execute/fprintf-1.c   -O2  execution test
+FAIL: gcc.c-torture/execute/fprintf-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/fprintf-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/fprintf-1.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/fprintf-1.c   -Os  execution test
+FAIL: gcc.c-torture/execute/fprintf-chk-1.c   -O0  execution test
+FAIL: gcc.c-torture/execute/fprintf-chk-1.c   -O1  execution test
+FAIL: gcc.c-torture/execute/fprintf-chk-1.c   -O2  execution test
+FAIL: gcc.c-torture/execute/fprintf-chk-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/fprintf-chk-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/fprintf-chk-1.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/fprintf-chk-1.c   -Os  execution test
+FAIL: gcc.c-torture/execute/mode-dependent-address.c   -O0  execution test
+FAIL: gcc.c-torture/execute/mode-dependent-address.c   -O1  execution test
+FAIL: gcc.c-torture/execute/mode-dependent-address.c   -O2  execution test
+FAIL: gcc.c-torture/execute/mode-dependent-address.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/mode-dependent-address.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/mode-dependent-address.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/mode-dependent-address.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/mode-dependent-address.c   -Os  execution test
+FAIL: gcc.c-torture/execute/pr23047.c   -O0  execution test
+FAIL: gcc.c-torture/execute/pr23135.c   -O0  execution test
+FAIL: gcc.c-torture/execute/pr23135.c   -O1  execution test
+FAIL: gcc.c-torture/execute/pr23135.c   -O2  execution test
+FAIL: gcc.c-torture/execute/pr23135.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/pr23135.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/pr23135.c   -Os  execution test
+FAIL: gcc.c-torture/execute/pr33142.c   -O0  execution test
+FAIL: gcc.c-torture/execute/pr33142.c   -O1  execution test
+FAIL: gcc.c-torture/execute/pr33142.c   -O2  execution test
+FAIL: gcc.c-torture/execute/pr33142.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/pr33142.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/pr33142.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/pr33142.c   -Os  execution test
+FAIL: gcc.c-torture/execute/pr34130.c   -O0  execution test
+FAIL: gcc.c-torture/execute/pr51581-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/pr51581-1.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/pr56866.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/pr56866.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/pr57144.c   -O0  execution test
+FAIL: gcc.c-torture/execute/pr68249.c   -Os  execution test
+FAIL: gcc.c-torture/execute/pr78586.c   -O0  execution test
+FAIL: gcc.c-torture/execute/pr78586.c   -O1  execution test
+FAIL: gcc.c-torture/execute/pr78586.c   -O2  execution test
+FAIL: gcc.c-torture/execute/pr78586.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/pr78586.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/pr78586.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/pr78586.c   -Os  execution test
+FAIL: gcc.c-torture/execute/pr79286.c   -O0  execution test
+FAIL: gcc.c-torture/execute/pr79286.c   -O1  execution test
+FAIL: gcc.c-torture/execute/pr79286.c   -O2  execution test
+FAIL: gcc.c-torture/execute/pr79286.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/pr79286.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/pr79286.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/pr79286.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/pr79286.c   -Os  execution test
+FAIL: gcc.c-torture/execute/pr80421.c   -O0  execution test
+FAIL: gcc.c-torture/execute/pr80421.c   -O1  execution test
+FAIL: gcc.c-torture/execute/pr80421.c   -O2  execution test
+FAIL: gcc.c-torture/execute/pr80421.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/pr80421.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/pr80421.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/pr80421.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/pr80421.c   -Os  execution test
+FAIL: gcc.c-torture/execute/pr82210.c   -Os  execution test
+FAIL: gcc.c-torture/execute/pr94734.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/printf-1.c   -O0  execution test
+FAIL: gcc.c-torture/execute/printf-1.c   -O1  execution test
+FAIL: gcc.c-torture/execute/printf-1.c   -O2  execution test
+FAIL: gcc.c-torture/execute/printf-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/printf-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/printf-1.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/printf-1.c   -Os  execution test
+FAIL: gcc.c-torture/execute/printf-chk-1.c   -O0  execution test
+FAIL: gcc.c-torture/execute/printf-chk-1.c   -O1  execution test
+FAIL: gcc.c-torture/execute/printf-chk-1.c   -O2  execution test
+FAIL: gcc.c-torture/execute/printf-chk-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/printf-chk-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/printf-chk-1.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/printf-chk-1.c   -Os  execution test
+FAIL: gcc.c-torture/execute/return-addr.c   -O0  execution test
+FAIL: gcc.c-torture/execute/return-addr.c   -O1  execution test
+FAIL: gcc.c-torture/execute/return-addr.c   -O2  execution test
+FAIL: gcc.c-torture/execute/return-addr.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/return-addr.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/return-addr.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/return-addr.c   -Os  execution test
+FAIL: gcc.c-torture/execute/scal-to-vec1.c   -O0  execution test
+FAIL: gcc.c-torture/execute/scal-to-vec1.c   -O1  execution test
+FAIL: gcc.c-torture/execute/scal-to-vec1.c   -O2  execution test
+FAIL: gcc.c-torture/execute/scal-to-vec1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/scal-to-vec1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/scal-to-vec1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/scal-to-vec1.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/scal-to-vec1.c   -Os  execution test
+FAIL: gcc.c-torture/execute/scal-to-vec2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/scal-to-vec2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/scal-to-vec2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/scal-to-vec2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/scal-to-vec2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/scal-to-vec2.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/scal-to-vec2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/scal-to-vec2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/simd-1.c   -O0  execution test
+FAIL: gcc.c-torture/execute/simd-1.c   -O1  execution test
+FAIL: gcc.c-torture/execute/simd-1.c   -O2  execution test
+FAIL: gcc.c-torture/execute/simd-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/simd-1.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/simd-1.c   -Os  execution test
+FAIL: gcc.c-torture/execute/simd-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/simd-2.c   -O1  execution test
+FAIL: gcc.c-torture/execute/simd-2.c   -O2  execution test
+FAIL: gcc.c-torture/execute/simd-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/simd-2.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/simd-2.c   -Os  execution test
+FAIL: gcc.c-torture/execute/simd-5.c   -O0  execution test
+FAIL: gcc.c-torture/execute/simd-5.c   -O1  execution test
+FAIL: gcc.c-torture/execute/simd-5.c   -O2  execution test
+FAIL: gcc.c-torture/execute/simd-5.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/simd-5.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/simd-5.c   -Os  execution test
+FAIL: gcc.c-torture/execute/ssad-run.c   -O0  execution test
+FAIL: gcc.c-torture/execute/ssad-run.c   -O1  execution test
+FAIL: gcc.c-torture/execute/ssad-run.c   -O2  execution test
+FAIL: gcc.c-torture/execute/ssad-run.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/ssad-run.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/ssad-run.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/ssad-run.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/ssad-run.c   -Os  execution test
+FAIL: gcc.c-torture/execute/struct-ret-1.c   -O0  execution test
+FAIL: gcc.c-torture/execute/struct-ret-1.c   -O1  execution test
+FAIL: gcc.c-torture/execute/struct-ret-1.c   -O2  execution test
+FAIL: gcc.c-torture/execute/struct-ret-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/struct-ret-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/struct-ret-1.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/struct-ret-1.c   -Os  execution test
+FAIL: gcc.c-torture/execute/usad-run.c   -O0  execution test
+FAIL: gcc.c-torture/execute/usad-run.c   -O1  execution test
+FAIL: gcc.c-torture/execute/usad-run.c   -O2  execution test
+FAIL: gcc.c-torture/execute/usad-run.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/usad-run.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/usad-run.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/usad-run.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/usad-run.c   -Os  execution test
+FAIL: gcc.c-torture/execute/va-arg-21.c   -O0  execution test
+FAIL: gcc.c-torture/execute/va-arg-21.c   -O1  execution test
+FAIL: gcc.c-torture/execute/va-arg-21.c   -O2  execution test
+FAIL: gcc.c-torture/execute/va-arg-21.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/va-arg-21.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/va-arg-21.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.c-torture/execute/va-arg-21.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/va-arg-21.c   -Os  execution test
+FAIL: gcc.c-torture/execute/vfprintf-1.c   -O0  execution test
+FAIL: gcc.c-torture/execute/vfprintf-1.c   -O1  execution test
+FAIL: gcc.c-torture/execute/vfprintf-1.c   -O2  execution test
+FAIL: gcc.c-torture/execute/vfprintf-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/vfprintf-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/vfprintf-1.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/vfprintf-1.c   -Os  execution test
+FAIL: gcc.c-torture/execute/vfprintf-chk-1.c   -O0  execution test
+FAIL: gcc.c-torture/execute/vfprintf-chk-1.c   -O1  execution test
+FAIL: gcc.c-torture/execute/vfprintf-chk-1.c   -O2  execution test
+FAIL: gcc.c-torture/execute/vfprintf-chk-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/vfprintf-chk-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/vfprintf-chk-1.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/vfprintf-chk-1.c   -Os  execution test
+FAIL: gcc.c-torture/execute/vprintf-1.c   -O0  execution test
+FAIL: gcc.c-torture/execute/vprintf-1.c   -O1  execution test
+FAIL: gcc.c-torture/execute/vprintf-1.c   -O2  execution test
+FAIL: gcc.c-torture/execute/vprintf-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/vprintf-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/vprintf-1.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/vprintf-1.c   -Os  execution test
+FAIL: gcc.c-torture/execute/vprintf-chk-1.c   -O0  execution test
+FAIL: gcc.c-torture/execute/vprintf-chk-1.c   -O1  execution test
+FAIL: gcc.c-torture/execute/vprintf-chk-1.c   -O2  execution test
+FAIL: gcc.c-torture/execute/vprintf-chk-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.c-torture/execute/vprintf-chk-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.c-torture/execute/vprintf-chk-1.c   -O3 -g  execution test
+FAIL: gcc.c-torture/execute/vprintf-chk-1.c   -Os  execution test
+FAIL: gcc.c-torture/execute/vrp-2.c   -O0  execution test
+FAIL: gcc.c-torture/execute/vrp-3.c   -O0  execution test
+FAIL: gcc.c-torture/execute/ieee/920810-1.c execution,  -O0
+FAIL: gcc.c-torture/execute/ieee/920810-1.c execution,  -O1
+FAIL: gcc.c-torture/execute/ieee/920810-1.c execution,  -O2
+FAIL: gcc.c-torture/execute/ieee/920810-1.c execution,  -O2 -flto -fno-use-linker-plugin -flto-partition=none
+FAIL: gcc.c-torture/execute/ieee/920810-1.c execution,  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects
+FAIL: gcc.c-torture/execute/ieee/920810-1.c execution,  -O3 -g
+FAIL: gcc.c-torture/execute/ieee/920810-1.c execution,  -Og -g
+FAIL: gcc.c-torture/execute/ieee/920810-1.c execution,  -Os
+FAIL: c-c++-common/ffile-prefix-map.c  -Wc++-compat  execution test
+FAIL: c-c++-common/fmacro-prefix-map.c  -Wc++-compat  execution test
+FAIL: c-c++-common/pr85822.c  -Wc++-compat  execution test
+FAIL: gcc.dg/20030225-1.c execution test
+FAIL: gcc.dg/absu.c execution test
+FAIL: gcc.dg/alias-11.c execution test
+FAIL: gcc.dg/ftrapv-2.c execution test
+FAIL: gcc.dg/loop-split.c execution test
+FAIL: gcc.dg/packed-array.c execution test
+FAIL: gcc.dg/packed-vla.c execution test
+FAIL: gcc.dg/pr19402-2.c execution test
+FAIL: gcc.dg/pr44606.c execution test
+FAIL: gcc.dg/pr46921.c execution test
+FAIL: gcc.dg/pr48616.c execution test
+FAIL: gcc.dg/pr51408.c execution test
+FAIL: gcc.dg/pr53060.c execution test
+FAIL: gcc.dg/pr57233.c execution test
+FAIL: gcc.dg/pr64252.c execution test
+FAIL: gcc.dg/pr67786.c execution test
+FAIL: gcc.dg/pr80286.c execution test
+FAIL: gcc.dg/pr87074.c execution test
+FAIL: gcc.dg/pr92301.c execution test
+FAIL: gcc.dg/sms-7.c execution test
+FAIL: gcc.dg/strlenopt-19.c execution test
+FAIL: gcc.dg/strlenopt-20.c execution test
+FAIL: gcc.dg/strlenopt-68.c execution test
+FAIL: gcc.dg/unroll-and-jam.c execution test
+FAIL: gcc.dg/vshift-3.c execution test
+FAIL: gcc.dg/vshift-4.c execution test
+FAIL: gcc.dg/ipa/ipa-sra-1.c execution test
+FAIL: gcc.dg/ipa/pr96040.c execution test
+FAIL: gcc.dg/lto/20081024 c_lto_20081024_0.o-c_lto_20081024_0.o execute -O0 -flto -flto-partition=1to1 -fno-use-linker-plugin
+FAIL: gcc.dg/lto/20081024 c_lto_20081024_0.o-c_lto_20081024_0.o execute -O0 -flto -flto-partition=none -fuse-linker-plugin
+FAIL: gcc.dg/lto/20081024 c_lto_20081024_0.o-c_lto_20081024_0.o execute -O0 -flto -fuse-linker-plugin -fno-fat-lto-objects
+FAIL: gcc.dg/lto/20081024 c_lto_20081024_0.o-c_lto_20081024_0.o execute -O2 -flto -flto-partition=1to1 -fno-use-linker-plugin
+FAIL: gcc.dg/lto/20081024 c_lto_20081024_0.o-c_lto_20081024_0.o execute -O2 -flto -flto-partition=none -fuse-linker-plugin -fno-fat-lto-objects
+FAIL: gcc.dg/lto/20081024 c_lto_20081024_0.o-c_lto_20081024_0.o execute -O2 -flto -fuse-linker-plugin
+FAIL: gcc.dg/lto/20090213 c_lto_20090213_0.o-c_lto_20090213_1.o execute -O0 -flto -flto-partition=1to1 -fno-use-linker-plugin
+FAIL: gcc.dg/lto/20090213 c_lto_20090213_0.o-c_lto_20090213_1.o execute -O0 -flto -flto-partition=none -fuse-linker-plugin
+FAIL: gcc.dg/lto/20090213 c_lto_20090213_0.o-c_lto_20090213_1.o execute -O0 -flto -fuse-linker-plugin -fno-fat-lto-objects
+FAIL: gcc.dg/lto/20090213 c_lto_20090213_0.o-c_lto_20090213_1.o execute -O2 -flto -flto-partition=1to1 -fno-use-linker-plugin
+FAIL: gcc.dg/lto/20090213 c_lto_20090213_0.o-c_lto_20090213_1.o execute -O2 -flto -flto-partition=none -fuse-linker-plugin -fno-fat-lto-objects
+FAIL: gcc.dg/lto/20090213 c_lto_20090213_0.o-c_lto_20090213_1.o execute -O2 -flto -fuse-linker-plugin
+FAIL: gcc.dg/sso/s3.c   -O0  execution test
+FAIL: gcc.dg/sso/s3.c   -O1 -fno-inline  execution test
+FAIL: gcc.dg/sso/s3.c   -O2  execution test
+FAIL: gcc.dg/sso/s3.c   -O3 -finline-functions  execution test
+FAIL: gcc.dg/sso/s3.c   -Og -g  execution test
+FAIL: gcc.dg/sso/s3.c   -Os  execution test
+FAIL: gcc.dg/sso/s5.c   -O0  execution test
+FAIL: gcc.dg/sso/s5.c   -O1 -fno-inline  execution test
+FAIL: gcc.dg/sso/s5.c   -O2  execution test
+FAIL: gcc.dg/sso/s5.c   -O3 -finline-functions  execution test
+FAIL: gcc.dg/sso/s5.c   -Og -g  execution test
+FAIL: gcc.dg/sso/s5.c   -Os  execution test
+FAIL: gcc.dg/sso/s6.c   -O0  execution test
+FAIL: gcc.dg/sso/s6.c   -O1 -fno-inline  execution test
+FAIL: gcc.dg/sso/s6.c   -O2  execution test
+FAIL: gcc.dg/sso/s6.c   -O3 -finline-functions  execution test
+FAIL: gcc.dg/sso/s6.c   -Og -g  execution test
+FAIL: gcc.dg/sso/s6.c   -Os  execution test
+FAIL: gcc.dg/sso/s7.c   -O0  execution test
+FAIL: gcc.dg/sso/s7.c   -O1 -fno-inline  execution test
+FAIL: gcc.dg/sso/s7.c   -O2  execution test
+FAIL: gcc.dg/sso/s7.c   -O3 -finline-functions  execution test
+FAIL: gcc.dg/sso/s7.c   -Og -g  execution test
+FAIL: gcc.dg/sso/s7.c   -Os  execution test
+FAIL: gcc.dg/sso/s8.c   -O0  execution test
+FAIL: gcc.dg/sso/s8.c   -O1 -fno-inline  execution test
+FAIL: gcc.dg/sso/s8.c   -O2  execution test
+FAIL: gcc.dg/sso/s8.c   -O3 -finline-functions  execution test
+FAIL: gcc.dg/sso/s8.c   -Og -g  execution test
+FAIL: gcc.dg/sso/s8.c   -Os  execution test
+FAIL: gcc.dg/sso/t5.c   -O3 -finline-functions  execution test
+FAIL: gcc.dg/sso/t7.c   -O3 -finline-functions  execution test
+FAIL: gcc.dg/sso/u5.c   -O0  execution test
+FAIL: gcc.dg/sso/u5.c   -O1 -fno-inline  execution test
+FAIL: gcc.dg/sso/u5.c   -O2  execution test
+FAIL: gcc.dg/sso/u5.c   -O3 -finline-functions  execution test
+FAIL: gcc.dg/sso/u5.c   -Og -g  execution test
+FAIL: gcc.dg/sso/u5.c   -Os  execution test
+FAIL: gcc.dg/sso/u6.c   -O0  execution test
+FAIL: gcc.dg/sso/u6.c   -O1 -fno-inline  execution test
+FAIL: gcc.dg/sso/u6.c   -O2  execution test
+FAIL: gcc.dg/sso/u6.c   -O3 -finline-functions  execution test
+FAIL: gcc.dg/sso/u6.c   -Og -g  execution test
+FAIL: gcc.dg/sso/u6.c   -Os  execution test
+FAIL: c-c++-common/torture/vector-shift.c   -O1  execution test
+FAIL: c-c++-common/torture/vector-shift.c   -O2  execution test
+FAIL: c-c++-common/torture/vector-shift.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: c-c++-common/torture/vector-shift.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: c-c++-common/torture/vector-shift.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: c-c++-common/torture/vector-shift.c   -O3 -g  execution test
+FAIL: c-c++-common/torture/vector-shift.c   -Os  execution test
+FAIL: c-c++-common/torture/vector-shift1.c   -O0  execution test
+FAIL: gcc.dg/torture/builtin-sprintf.c   -O0  execution test
+FAIL: gcc.dg/torture/builtin-sprintf.c   -O1  execution test
+FAIL: gcc.dg/torture/builtin-sprintf.c   -O2  execution test
+FAIL: gcc.dg/torture/builtin-sprintf.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.dg/torture/builtin-sprintf.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.dg/torture/builtin-sprintf.c   -O3 -g  execution test
+FAIL: gcc.dg/torture/builtin-sprintf.c   -Os  execution test
+FAIL: gcc.dg/torture/matrix-1.c   -O0  execution test
+FAIL: gcc.dg/torture/matrix-1.c   -O1  execution test
+FAIL: gcc.dg/torture/matrix-1.c   -O2  execution test
+FAIL: gcc.dg/torture/matrix-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.dg/torture/matrix-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.dg/torture/matrix-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.dg/torture/matrix-1.c   -O3 -g  execution test
+FAIL: gcc.dg/torture/matrix-1.c   -Os  execution test
+FAIL: gcc.dg/torture/matrix-2.c   -O0  execution test
+FAIL: gcc.dg/torture/matrix-2.c   -O1  execution test
+FAIL: gcc.dg/torture/matrix-2.c   -O2  execution test
+FAIL: gcc.dg/torture/matrix-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.dg/torture/matrix-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.dg/torture/matrix-2.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.dg/torture/matrix-2.c   -O3 -g  execution test
+FAIL: gcc.dg/torture/matrix-2.c   -Os  execution test
+FAIL: gcc.dg/torture/matrix-5.c   -O0  execution test
+FAIL: gcc.dg/torture/matrix-5.c   -O1  execution test
+FAIL: gcc.dg/torture/matrix-5.c   -O2  execution test
+FAIL: gcc.dg/torture/matrix-5.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.dg/torture/matrix-5.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.dg/torture/matrix-5.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.dg/torture/matrix-5.c   -O3 -g  execution test
+FAIL: gcc.dg/torture/matrix-5.c   -Os  execution test
+FAIL: gcc.dg/torture/matrix-6.c   -O0  execution test
+FAIL: gcc.dg/torture/matrix-6.c   -O1  execution test
+FAIL: gcc.dg/torture/matrix-6.c   -O2  execution test
+FAIL: gcc.dg/torture/matrix-6.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.dg/torture/matrix-6.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.dg/torture/matrix-6.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.dg/torture/matrix-6.c   -O3 -g  execution test
+FAIL: gcc.dg/torture/matrix-6.c   -Os  execution test
+FAIL: gcc.dg/torture/pr47383.c   -Os  execution test
+FAIL: gcc.dg/torture/pr47917.c   -O0  execution test
+FAIL: gcc.dg/torture/pr47917.c   -O1  execution test
+FAIL: gcc.dg/torture/pr47917.c   -O2  execution test
+FAIL: gcc.dg/torture/pr47917.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.dg/torture/pr47917.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.dg/torture/pr47917.c   -O3 -g  execution test
+FAIL: gcc.dg/torture/pr47917.c   -Os  execution test
+FAIL: gcc.dg/torture/pr53501.c   -Os  execution test
+FAIL: gcc.dg/torture/pr56443.c   -O1  execution test
+FAIL: gcc.dg/torture/pr56443.c   -O2  execution test
+FAIL: gcc.dg/torture/pr56443.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.dg/torture/pr56443.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.dg/torture/pr56443.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.dg/torture/pr56443.c   -O3 -g  execution test
+FAIL: gcc.dg/torture/pr65270-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.dg/torture/pr65270-1.c   -O3 -g  execution test
+FAIL: gcc.dg/torture/pr65270-2.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.dg/torture/pr65270-2.c   -O3 -g  execution test
+FAIL: gcc.dg/torture/pr67769.c   -O1  execution test
+FAIL: gcc.dg/torture/pr67769.c   -O2  execution test
+FAIL: gcc.dg/torture/pr67769.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.dg/torture/pr67769.c   -O3 -g  execution test
+FAIL: gcc.dg/torture/pr67769.c   -Os  execution test
+FAIL: gcc.dg/torture/pr68955.c   -O0  execution test
+FAIL: gcc.dg/torture/pr68955.c   -O1  execution test
+FAIL: gcc.dg/torture/pr68955.c   -O2  execution test
+FAIL: gcc.dg/torture/pr68955.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.dg/torture/pr68955.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.dg/torture/pr68955.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.dg/torture/pr68955.c   -O3 -g  execution test
+FAIL: gcc.dg/torture/pr68955.c   -Os  execution test
+FAIL: gcc.dg/torture/pr68963.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.dg/torture/pr68963.c   -O3 -g  execution test
+FAIL: gcc.dg/torture/pr70310.c   -O0  execution test
+FAIL: gcc.dg/torture/pr70310.c   -O1  execution test
+FAIL: gcc.dg/torture/pr70310.c   -O2  execution test
+FAIL: gcc.dg/torture/pr70310.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.dg/torture/pr70310.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.dg/torture/pr70310.c   -O3 -g  execution test
+FAIL: gcc.dg/torture/pr70310.c   -Os  execution test
+FAIL: gcc.dg/torture/pr77436.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.dg/torture/pr77436.c   -O3 -g  execution test
+FAIL: gcc.dg/torture/pr77855.c   -O0  execution test
+FAIL: gcc.dg/torture/pr77855.c   -O1  execution test
+FAIL: gcc.dg/torture/pr77855.c   -O2  execution test
+FAIL: gcc.dg/torture/pr77855.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.dg/torture/pr77855.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.dg/torture/pr77855.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.dg/torture/pr77855.c   -O3 -g  execution test
+FAIL: gcc.dg/torture/pr77855.c   -Os  execution test
+FAIL: gcc.dg/torture/pr78731.c   -O0  execution test
+FAIL: gcc.dg/torture/pr78731.c   -O1  execution test
+FAIL: gcc.dg/torture/pr78731.c   -O2  execution test
+FAIL: gcc.dg/torture/pr78731.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.dg/torture/pr78731.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.dg/torture/pr78731.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.dg/torture/pr78731.c   -O3 -g  execution test
+FAIL: gcc.dg/torture/pr78731.c   -Os  execution test
+FAIL: gcc.dg/torture/pr80122.c   -O0  execution test
+FAIL: gcc.dg/torture/pr80122.c   -O1  execution test
+FAIL: gcc.dg/torture/pr80122.c   -O2  execution test
+FAIL: gcc.dg/torture/pr80122.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.dg/torture/pr80122.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.dg/torture/pr80122.c   -O3 -g  execution test
+FAIL: gcc.dg/torture/pr80122.c   -Os  execution test
+FAIL: gcc.dg/torture/pr89595.c   -O1  execution test
+FAIL: gcc.dg/torture/pr89595.c   -O2  execution test
+FAIL: gcc.dg/torture/pr89595.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.dg/torture/pr89595.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.dg/torture/pr89595.c   -O3 -g  execution test
+FAIL: gcc.dg/torture/pr89595.c   -Os  execution test
+FAIL: gcc.dg/torture/pr90328.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.dg/torture/pr90328.c   -O3 -g  execution test
+FAIL: gcc.dg/torture/pr94516.c   -O0  execution test
+FAIL: gcc.dg/torture/pr94516.c   -O1  execution test
+FAIL: gcc.dg/torture/pr94516.c   -O2  execution test
+FAIL: gcc.dg/torture/pr94516.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.dg/torture/pr94516.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.dg/torture/pr94516.c   -O3 -g  execution test
+FAIL: gcc.dg/torture/pr94516.c   -Os  execution test
+FAIL: gcc.dg/torture/transpose-1.c   -O0  execution test
+FAIL: gcc.dg/torture/transpose-1.c   -O1  execution test
+FAIL: gcc.dg/torture/transpose-1.c   -O2  execution test
+FAIL: gcc.dg/torture/transpose-1.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.dg/torture/transpose-1.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.dg/torture/transpose-1.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.dg/torture/transpose-1.c   -O3 -g  execution test
+FAIL: gcc.dg/torture/transpose-1.c   -Os  execution test
+FAIL: gcc.dg/torture/transpose-2.c   -O0  execution test
+FAIL: gcc.dg/torture/transpose-2.c   -O1  execution test
+FAIL: gcc.dg/torture/transpose-2.c   -O2  execution test
+FAIL: gcc.dg/torture/transpose-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.dg/torture/transpose-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.dg/torture/transpose-2.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.dg/torture/transpose-2.c   -O3 -g  execution test
+FAIL: gcc.dg/torture/transpose-2.c   -Os  execution test
+FAIL: gcc.dg/torture/transpose-3.c   -O0  execution test
+FAIL: gcc.dg/torture/transpose-3.c   -O1  execution test
+FAIL: gcc.dg/torture/transpose-3.c   -O2  execution test
+FAIL: gcc.dg/torture/transpose-3.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.dg/torture/transpose-3.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.dg/torture/transpose-3.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.dg/torture/transpose-3.c   -O3 -g  execution test
+FAIL: gcc.dg/torture/transpose-3.c   -Os  execution test
+FAIL: gcc.dg/torture/transpose-4.c   -O0  execution test
+FAIL: gcc.dg/torture/transpose-4.c   -O1  execution test
+FAIL: gcc.dg/torture/transpose-4.c   -O2  execution test
+FAIL: gcc.dg/torture/transpose-4.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.dg/torture/transpose-4.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.dg/torture/transpose-4.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.dg/torture/transpose-4.c   -O3 -g  execution test
+FAIL: gcc.dg/torture/transpose-4.c   -Os  execution test
+FAIL: gcc.dg/torture/transpose-5.c   -O0  execution test
+FAIL: gcc.dg/torture/transpose-5.c   -O1  execution test
+FAIL: gcc.dg/torture/transpose-5.c   -O2  execution test
+FAIL: gcc.dg/torture/transpose-5.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.dg/torture/transpose-5.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.dg/torture/transpose-5.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.dg/torture/transpose-5.c   -O3 -g  execution test
+FAIL: gcc.dg/torture/transpose-5.c   -Os  execution test
+FAIL: gcc.dg/torture/transpose-6.c   -O0  execution test
+FAIL: gcc.dg/torture/transpose-6.c   -O1  execution test
+FAIL: gcc.dg/torture/transpose-6.c   -O2  execution test
+FAIL: gcc.dg/torture/transpose-6.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.dg/torture/transpose-6.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.dg/torture/transpose-6.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test
+FAIL: gcc.dg/torture/transpose-6.c   -O3 -g  execution test
+FAIL: gcc.dg/torture/transpose-6.c   -Os  execution test
+FAIL: gcc.dg/tree-ssa/builtin-sprintf.c execution test
+FAIL: gcc.dg/tree-ssa/gen-vect-11.c execution test
+FAIL: gcc.dg/tree-ssa/gen-vect-11c.c execution test
+FAIL: gcc.dg/tree-ssa/gen-vect-11c.c scan-tree-dump-times vect "vectorized 0 loops" 1
+FAIL: gcc.dg/tree-ssa/ldist-26.c execution test
+FAIL: gcc.dg/tree-ssa/pr79327.c execution test
+FAIL: gcc.target/riscv/attribute-8.c scan-assembler .attribute arch, "rv32i2p0_xv5p0_xabc2p0"
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-insb.c (internal compiler error)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-insb.c (test for excess errors)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-kslli.c (internal compiler error)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-kslli.c (test for excess errors)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-sclip16.c (internal compiler error)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-sclip16.c (test for excess errors)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-sclip32.c (internal compiler error)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-sclip32.c (test for excess errors)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-slli32.c (internal compiler error)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-slli32.c (test for excess errors)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-srai16.c (internal compiler error)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-srai16.c (test for excess errors)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-srai16u.c (internal compiler error)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-srai16u.c (test for excess errors)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-srai32.c (internal compiler error)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-srai32.c (test for excess errors)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-srai32u.c (internal compiler error)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-srai32u.c (test for excess errors)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-sraiu.c (internal compiler error)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-sraiu.c (test for excess errors)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-srli16.c (internal compiler error)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-srli16.c (test for excess errors)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-srli16u.c (internal compiler error)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-srli16u.c (test for excess errors)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-srli32.c (internal compiler error)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-srli32.c (test for excess errors)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-srli32u.c (internal compiler error)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-srli32u.c (test for excess errors)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-uclip16.c (internal compiler error)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-uclip16.c (test for excess errors)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-uclip32.c (internal compiler error)
+FAIL: gcc.target/riscv/rvp64_scan/builtin-rvp64-uclip32.c (test for excess errors)
 
                ========= Summary of gcc testsuite =========
                             | # of unexpected case / # of unique unexpected case
                             |          gcc |          g++ |     gfortran |
- rv64i_zpn_zprv_zpsf/   lp64/ medlow |   38 /    19 |    0 /     0 |      - |
+ rv64i_zpn_zprv_zpsf/   lp64/ medlow |  685 /   164 |  298 /    78 |      - |
 Makefile:913: recipe for target 'report-gcc-newlib' failed
