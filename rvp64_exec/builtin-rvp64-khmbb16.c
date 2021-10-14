@@ -1,12 +1,12 @@
 /* This is a test program for khmbb16 instruction.  */
 /* { dg-do run } */
-/* { dg-options "-march=rv64gc_zpn_zprv_zpsf -mabi=lp64d -O2" } */
+/* { dg-options "-march=rv64gc_zpn_zpsf -mabi=lp64d -O2" } */
 
 
 #include <rvp_intrinsic.h>
 #include <stdlib.h>
 #include <stdint.h>
-#include "test_utils.h"
+
 
 static __attribute__ ((noinline))
 uint64_t khmbb16 (uint64_t ra, uint64_t rb)
@@ -15,7 +15,7 @@ uint64_t khmbb16 (uint64_t ra, uint64_t rb)
 }
 
 static __attribute__ ((noinline))
-int32x2_t v_khmbb16 (int16x2_t ra, int16x2_t rb)
+int32x2_t v_khmbb16 (int16x4_t ra, int16x4_t rb)
 {
   return __rv_v_khmbb16 (ra, rb);
 }

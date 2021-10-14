@@ -1,12 +1,12 @@
 /* This is a test program for kmmawt2.u instruction.  */
 /* { dg-do run } */
-/* { dg-options "-march=rv64gc_zpn_zprv_zpsf -mabi=lp64d -O2" } */
+/* { dg-options "-march=rv64gc_zpn_zpsf -mabi=lp64d -O2" } */
 
 
 #include <rvp_intrinsic.h>
 #include <stdlib.h>
 #include <stdint.h>
-#include "test_utils.h"
+
 
 static __attribute__ ((noinline))
 int64_t kmmawt2u (int64_t rd, int64_t ra, uint64_t rb)
