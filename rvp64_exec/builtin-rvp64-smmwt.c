@@ -6,7 +6,7 @@
 #include <rvp_intrinsic.h>
 #include <stdlib.h>
 #include <stdint.h>
-
+#include "test_utils.h"
 
 static __attribute__ ((noinline))
 int64_t smmwt (int64_t ra, int64_t rb)

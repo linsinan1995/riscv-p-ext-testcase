@@ -6,7 +6,7 @@
 #include <rvp_intrinsic.h>
 #include <stdlib.h>
 #include <stdint.h>
-
+#include "test_utils.h"
 
 static __attribute__ ((noinline))
 int64_t kaddw (int32_t ra, int32_t rb)

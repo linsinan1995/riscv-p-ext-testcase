@@ -6,7 +6,7 @@
 #include <rvp_intrinsic.h>
 #include <stdlib.h>
 #include <stdint.h>
-
+#include "test_utils.h"
 
 static __attribute__ ((noinline))
 int64_t sclip16 (int64_t ra)
@@ -29,7 +29,7 @@ main ()
 
   if (a != 0x3000300030003)
     abort ();
-  else if (!vec64_all_eq (s, 16, v_sa_p, v_sa))
+  else if (!vec_all_eq_int16x4_t ( v_sa_p, v_sa))
     abort ();
   else
     exit (0);

@@ -6,7 +6,7 @@
 #include <rvp_intrinsic.h>
 #include <stdlib.h>
 #include <stdint.h>
-
+#include "test_utils.h"
 
 static __attribute__ ((noinline))
 int64_t kmsda32 (int64_t rd, uint64_t ra, uint64_t rb)

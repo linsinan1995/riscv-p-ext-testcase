@@ -6,7 +6,7 @@
 #include <rvp_intrinsic.h>
 #include <stdlib.h>
 #include <stdint.h>
-
+#include "test_utils.h"
 
 static __attribute__ ((noinline))
 int64_t smtt (uint64_t ra, uint64_t rb)
@@ -23,7 +23,7 @@ int32x2_t v_smtt (int16x4_t ra, int16x4_t rb)
 int
 main ()
 {
-  int32_t a = smtt (0x8000000280000002, 0x8000000180000001);
+  int64_t a = smtt (0x8000000280000002, 0x8000000180000001);
   int32x2_t va = v_smtt ((int16x4_t) {0xffff, 0x0002, 0xffff, 0x0002},
 			 (int16x4_t) {0xffff, 0x0001, 0xffff, 0x0001});
 

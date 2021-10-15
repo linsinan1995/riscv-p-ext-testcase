@@ -1,9 +1,23 @@
-#define vec_all_eq(ret, size, vec1, vec2) \
-do                                            \
-{                                             \
-  unsigned int __i=0;                         \
-  bool __ret=true;                            \
-  for (__i=0; __i < __riscv_xlen/size; __i++) \
-    __ret &= (vec1[__i] == vec2[__i]);        \
-  ret=__ret                                   \
-} while (0)                                   \
+#include <rvp_intrinsic.h>
+#include <stdio.h>
+
+#define vec_all_eq_(type, n) \
+unsigned vec_all_eq_ ## type (type vec1, type vec2) {  \
+  unsigned i, ret = 1, size = n;                            \
+  for (i = 0; i < size; i++) {          \
+    ret &= (vec1[i] == vec2[i]);                    \
+  }                                                     \
+  return ret;                                           \
+}
+
+vec_all_eq_ (int8x4_t, 4)
+vec_all_eq_ (int8x8_t, 8)
+vec_all_eq_ (int16x2_t, 2)
+vec_all_eq_ (int16x4_t, 4)
+vec_all_eq_ (int16x8_t, 8)
+vec_all_eq_ (int32x2_t, 2)
+vec_all_eq_ (uint8x4_t, 4)
+vec_all_eq_ (uint8x8_t, 8)
+vec_all_eq_ (uint16x2_t, 2)
+vec_all_eq_ (uint16x4_t, 4)
+vec_all_eq_ (uint32x2_t, 2)

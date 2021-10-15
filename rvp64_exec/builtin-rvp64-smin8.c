@@ -6,7 +6,7 @@
 #include <rvp_intrinsic.h>
 #include <stdlib.h>
 #include <stdint.h>
-
+#include "test_utils.h"
 
 static __attribute__ ((noinline))
 uint64_t smin8 (uint64_t ra, uint64_t rb)
@@ -29,7 +29,7 @@ main ()
 			   (int8x8_t) {0x7f, 0xfe, 0x1, 0x23, 0x7f, 0xfe, 0x1, 0x23});
   if (a != 0xfffe0000fffe0000)
     abort ();
-  else if (!vec64_all_eq (s, 8, v_sa_p, v_sa))
+  else if (!vec_all_eq_int8x8_t ( v_sa_p, v_sa))
     abort ();
   else
     exit (0);

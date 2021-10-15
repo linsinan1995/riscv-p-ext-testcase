@@ -73,9 +73,9 @@ get_status() {
 
 run_test() {
     CFLAGS=$1
-    rm $log_path
+    rm -f $log_path
     for filename in $test_dir/*.c; do
-        $riscv_home/$GCC $CFLAGS $filename 2>> $log_path 1> /dev/null
+        $riscv_home/$GCC $CFLAGS -o a.out $filename 2>> $log_path 1> /dev/null
 
         if [ "$?" != "0" ]; then
             status="FAIL"
@@ -108,8 +108,13 @@ run_test() {
     fi
 }
 
-if [ $execute == 1 ] ; then
-    run_test
-elif [ $compile == 1 ] ; then
-    run_test -S
+if [ -f "$riscv_home/$GCC" ] ; then
+    if [ $execute == 1 ] ; then
+        run_test
+        rm a.out
+    elif [ $compile == 1 ] ; then
+        run_test -S
+    fi
+else
+    echo "no file $riscv_home/$GCC"
 fi

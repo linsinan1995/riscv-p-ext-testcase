@@ -6,7 +6,7 @@
 #include <rvp_intrinsic.h>
 #include <stdlib.h>
 #include <stdint.h>
-
+#include "test_utils.h"
 
 static __attribute__ ((noinline))
 uint64_t zunpkd831 (uint64_t a)
@@ -29,7 +29,7 @@ main ()
 
   if (a != 0x001200f8001200f8)
     abort ();
-  else if (!vec_all_eq (ret, 16, va_p, va))
+  else if (!vec_all_eq_uint16x4_t ( va_p, va))
     abort ();
   else
     exit (0);

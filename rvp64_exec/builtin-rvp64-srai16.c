@@ -6,7 +6,7 @@
 #include <rvp_intrinsic.h>
 #include <stdlib.h>
 #include <stdint.h>
-
+#include "test_utils.h"
 
 static __attribute__ ((noinline))
 uint64_t srai16 (uint64_t ra)
@@ -31,7 +31,7 @@ main ()
 
   if (a != 0x00ffff0000ffff00)
     abort ();
-  else if (!vec64_all_eq (s, 16, va_p, va))
+  else if (!vec_all_eq_int16x4_t ( va_p, va))
     abort ();
   else
     exit (0);

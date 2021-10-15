@@ -6,7 +6,7 @@
 #include <rvp_intrinsic.h>
 #include <stdlib.h>
 #include <stdint.h>
-
+#include "test_utils.h"
 
 static __attribute__ ((noinline))
 uint64_t cmpeq8 (uint64_t ra, uint64_t rb)
@@ -39,9 +39,9 @@ main ()
 
   if (a != 0xffff0000ffff0000)
     abort ();
-  else if (!vec_all_eq (ret, 8, v_sa_p, v_sa))
+  else if (!vec_all_eq_uint8x8_t (v_sa_p, v_sa))
     abort ();
-  else if (!vec_all_eq (ret, 8, v_ua_p, v_ua))
+  else if (!vec_all_eq_uint8x8_t (v_ua_p, v_ua))
     abort ();
   else
     exit (0);

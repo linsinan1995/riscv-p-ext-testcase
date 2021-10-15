@@ -6,7 +6,7 @@
 #include <rvp_intrinsic.h>
 #include <stdlib.h>
 #include <stdint.h>
-
+#include "test_utils.h"
 
 static __attribute__ ((noinline))
 uint64_t smax16 (uint64_t ra, uint64_t rb)
@@ -29,7 +29,7 @@ main ()
 			   (int16x4_t) {0x7ffe, 1, 0x7ffe, 1});
   if (a != 0xffff0001ffff0001)
     abort ();
-  else if (!vec64_all_eq (s, 16, va_p, va))
+  else if (!vec_all_eq_int16x4_t ( va_p, va))
     abort ();
   else
     exit (0);

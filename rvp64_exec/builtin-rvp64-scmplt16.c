@@ -6,7 +6,7 @@
 #include <rvp_intrinsic.h>
 #include <stdlib.h>
 #include <stdint.h>
-
+#include "test_utils.h"
 
 static __attribute__ ((noinline))
 uint64_t scmplt16 (uint64_t ra, uint64_t rb)
@@ -30,7 +30,7 @@ main ()
 
   if (a != 0xffff0000ffff0000)
     abort ();
-  else if (!vec_all_eq (ret, 16, va_p, va))
+  else if (!vec_all_eq_uint16x4_t (va_p, va))
     abort ();
   else
     exit (0);
