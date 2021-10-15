@@ -15,9 +15,9 @@ uint32_t insb (uint32_t ra, uint32_t rb)
 int
 main ()
 {
-  uint32_t a = insb (0x1122004411220044, 0x33);
+  uint32_t a = insb (0x11220044, 0x33);
 
-  if (a != 0x1122004411223344)
+  if (a != 0x11223344)
     abort ();
   else
     exit (0);
