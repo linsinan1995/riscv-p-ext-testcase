@@ -30,11 +30,11 @@ main ()
   b = swap16 (a);
   res = v_swap16 (va);
 
-  if (b != 0x02030001)
+  if (b != 0x01000302)
     abort ();
   else
     exit (0);
-
+  
   if (vec_all_eq_uint16x4_t (res, (uint16x4_t) {0x0001, 0x1000, 0x0002, 0x2000}))
     abort ();
   else
