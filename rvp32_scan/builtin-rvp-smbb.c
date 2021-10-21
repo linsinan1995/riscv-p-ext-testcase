@@ -1,6 +1,6 @@
 /* This is a test program for smbb instruction.  */
 /* { dg-do compile { target riscv32*-*-* } } */
-/* { dg-options "-march=rv32i_zpn -mabi=ilp32 -O0" } */
+/* { dg-options "-march=rv32gc_zpn -mabi=ilp32d -O0" } */
 
 #include <rvp_intrinsic.h>
 #include <stdlib.h>

@@ -1,7 +1,7 @@
 /* kadd16 also appears on filename, so scan-assembler-times plus 1 */
 /* This is a test program for add16 instruction.  */
 /* { dg-do compile { target riscv64*-*-* } } */
-/* { dg-options "-march=rv64i_zpn_zpsf -mabi=lp64 -O0" } */
+/* { dg-options "-march=rv64gc_zpn_zpsf -mabi=lp64d -O0" } */
 
 
 #include <rvp_intrinsic.h>

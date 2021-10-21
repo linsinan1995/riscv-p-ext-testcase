@@ -35,6 +35,16 @@ uintXLEN_t foo3(uintXLEN_t a, uintXLEN_t b) {
 }
 
 static __attribute__ ((noinline))
+uintXLEN_t foo21(uintXLEN_t a, uintXLEN_t b) {
+  return __rv_kstas16 (a, b);
+}
+
+static __attribute__ ((noinline))
+uintXLEN_t foo31(uintXLEN_t a, uintXLEN_t b) {
+  return __rv_ukstas16 (a, b);
+}
+
+static __attribute__ ((noinline))
 vxUHI foo4(vxUHI a, vxUHI b) {
   return __rv_v_ustas16 (a, b);
 }
@@ -52,6 +62,16 @@ vxHI foo6(vxHI a, vxHI b) {
 static __attribute__ ((noinline))
 vxUHI foo7(vxUHI a, vxUHI b) {
   return __rv_v_urstas16 (a, b);
+}
+
+static __attribute__ ((noinline))
+vxHI foo8(vxHI a, vxHI b) {
+  return __rv_v_kstas16 (a, b);
+}
+
+static __attribute__ ((noinline))
+vxUHI foo9(vxUHI a, vxUHI b) {
+  return __rv_v_ukstas16 (a, b);
 }
 
 /* { dg-final { scan-assembler-times "stas16" 4 } } */
