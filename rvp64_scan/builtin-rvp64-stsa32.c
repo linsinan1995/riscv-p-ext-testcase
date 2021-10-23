@@ -67,9 +67,9 @@ vxUSI foo11(vxUSI a, vxUSI b) {
   return __rv_v_ukstsa32 (a, b);
 }
 
-/* { dg-final { scan-assembler-times "stsa32" 4 } } */
-/* { dg-final { scan-assembler-times "rstsa32" 2 } } */
+/* { dg-final { scan-assembler-times "stsa32" 12 } } */
+/* { dg-final { scan-assembler-times "rstsa32" 4 } } */
 /* { dg-final { scan-assembler-times "urstsa32" 2 } } */
-/* { dg-final { scan-assembler-times "kstsa32" 2 } } */
+/* { dg-final { scan-assembler-times "kstsa32" 4 } } */
 /* { dg-final { scan-assembler-times "ukstsa32" 2 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

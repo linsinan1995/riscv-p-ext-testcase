@@ -43,7 +43,7 @@ int32x2_t ttms_v2 (int16x2_t a, int16x2_t b)
 }
 
 static __attribute__ ((noinline))
-uint64_t ttms2 (uint32_t a, uint32_t b)
+uint64_t xttms2 (uint32_t a, uint32_t b)
 {
   return __rv_smulx16 (a, b);
 }
