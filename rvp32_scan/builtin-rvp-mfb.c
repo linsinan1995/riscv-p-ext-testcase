@@ -58,6 +58,6 @@ vxUSI foo5(vxUSI t, vxUQI a, vxUQI b) {
 }
 
 /* { dg-final { scan-assembler-times "smaqa.su" 2 } } */
-/* { dg-final { scan-assembler-times "smaqa" 2 } } */
+/* { dg-final { scan-assembler-times "smaqa" 4 } } */
 /* { dg-final { scan-assembler-times "umaqa" 2 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

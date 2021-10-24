@@ -13,5 +13,13 @@ uint64_t vertib (uint64_t ra, uint32_t rb)
 {
   return __rv_bitrev (ra, rb);
 }
-/* { dg-final { scan-assembler-times "bitrev" 2 } } */
+
+static __attribute__ ((noinline))
+uint64_t ivertib (uint64_t ra)
+{
+  return __rv_bitrev (ra, 3);
+}
+
+/* { dg-final { scan-assembler-times "bitrev" 3 } } */
+/* { dg-final { scan-assembler-times "bitrevi" 1 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */

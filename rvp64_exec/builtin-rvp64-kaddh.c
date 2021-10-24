@@ -10,7 +10,7 @@
 
 
 static __attribute__ ((noinline))
-int64_t kaddh (int32_t ra, int32_t rb)
+int32_t kaddh (int32_t ra, int32_t rb)
 {
   return __rv_kaddh (ra, rb);
 }
@@ -18,7 +18,7 @@ int64_t kaddh (int32_t ra, int32_t rb)
 int
 main ()
 {
-  int64_t sa = kaddh (0x11223344, 0x55667788);
+  int32_t sa = kaddh (0x11223344, 0x55667788);
 
   if (sa != 0x7fff)
     abort ();
