@@ -1,6 +1,6 @@
 /* smtt32 also appears on filename, so scan-assembler-times plus 1 */
 /* { dg-do compile { target riscv64*-*-* } } */
-/* { dg-options "-march=rv64gc_zpn_zprv_zpsf -mabi=lp64d -O0" } */
+/* { dg-options "-march=rv64gc_zpn_zpsf -mabi=lp64d -O0" } */
 
 #include <rvp_intrinsic.h>
 #include <stdlib.h>

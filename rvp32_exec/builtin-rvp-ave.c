@@ -18,9 +18,9 @@ main ()
 {
   int a = 4;
   int b = 2;
-  int ave = ave (a, b);
+  int r = ave (a, b);
 
-  if (ave != 3)
+  if (r != 3)
     abort ();
   else
     exit (0);

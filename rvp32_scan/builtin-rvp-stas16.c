@@ -74,9 +74,9 @@ vxUHI foo11(vxUHI a, vxUHI b) {
   return __rv_v_ukstas16 (a, b);
 }
 
-/* { dg-final { scan-assembler-times "stas16" 4 } } */
-/* { dg-final { scan-assembler-times "rstas16" 2 } } */
+/* { dg-final { scan-assembler-times "stas16" 12 } } */
+/* { dg-final { scan-assembler-times "rstas16" 4 } } */
 /* { dg-final { scan-assembler-times "urstas16" 2 } } */
-/* { dg-final { scan-assembler-times "kstas16" 2 } } */
+/* { dg-final { scan-assembler-times "kstas16" 4 } } */
 /* { dg-final { scan-assembler-times "ukstas16" 2 } } */
 /* { dg-final { scan-assembler-times "builtin_riscv" 0 } } */
